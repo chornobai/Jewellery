@@ -1,0 +1,90 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: black;
+  overflow-x: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button{
+  cursor: pointer;
+}
+
+.btn{
+  background: $brown;
+  color:$white;
+  font-family: inherit;
+  line-height: inherit;
+  font-weight: 500;
+  text-align: center;
+  border:none;
+}
+
+.wrapper {
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.container{
+  margin:0 15px;
+padding:0 calc(50% - 615px);
+}
+
+@media (max-width: $tablet-width) {
+  .container{
+  padding:0 calc(50% - 354px);
+  }
+
+}
+@media (max-width: $mobile-width) {
+}

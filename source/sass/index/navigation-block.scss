@@ -1,0 +1,26 @@
+.navigation-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 calc(50% - 240px);
+}
+.navigation-block__link {
+  color:$black;
+  line-height: 130%;
+  font-size: 45px;
+  &:hover {
+    color:$brown;
+    border-bottom: 1px solid $brown;
+
+  }
+  &:focus {
+    color:$brown;
+    border-bottom: 1px solid $brown;
+
+  }
+  &:active {
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+}

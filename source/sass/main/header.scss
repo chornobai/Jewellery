@@ -1,0 +1,325 @@
+.header {
+  &--page{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding:20px 0 0 0;
+    margin-bottom: 20px;
+
+.header-top__logo{
+  position: static;
+  left: 0;
+  top: 0;
+  transform: translate(0, 0);
+  &:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+  }
+  &:focus{
+    transform: scale(1.1);
+    transition: 0.2s;
+  }
+  &:active{
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+}
+  }
+}
+.header-top {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 38px calc(50% - 605px) 48px;
+
+  border-bottom: 1px solid $grey-light;
+  margin: 0 20px;
+}
+
+.header-top input {
+  border: none;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: inherit;
+  line-height: 150%;
+  outline: none;
+  border-bottom: 1px solid $white;
+
+  &::placeholder {
+    font-family: inherit;
+    font-size: 14px;
+  }
+  &:focus {
+    border-bottom: 1px solid $black;
+  }
+}
+
+.header-top__button {
+  @include reset;
+  display: none;
+  border: none;
+  background: transparent;
+
+  svg {
+
+    color: $black;
+  }
+
+  &:hover {
+    transition: 0.2s;
+    svg {
+      color: $brown;
+    }
+  }
+  &:focus {
+    transition: 0.2s;
+  }
+  &:active {
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+}
+
+.header-top__form-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0 0 0;
+  background: transparent;
+  border: none;
+
+  margin-right: 9px;
+svg{
+
+width:15px;
+height: 15px;
+}
+  &:hover {
+    transition: 0.2s;
+
+    svg {
+      color: $brown;
+    }
+  }
+  &:focus {
+    color: $brown;
+    transition: 0.2s;
+  }
+  &:active {
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+}
+
+
+.header-top__logo {
+  position: absolute;
+  left: 50%;
+  top: 58%;
+  transform: translate(-50%, -50%);
+
+  svg {
+    color: $brown;
+  }
+}
+.header-top__right {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40px, auto));
+  max-width: 300px;
+  grid-column-gap: 35px;
+  padding-right: 1px;
+
+  p {
+    @include reset-block;
+  }
+}
+
+.header-top__link {
+
+  color: $black;
+  font-size: 14px;
+  font-weight: inherit;
+  line-height: 150%;
+  border-bottom: 1px solid transparent;
+  &:hover {
+
+    color: $brown;
+    border-bottom: 1px solid $brown;
+  }
+  &:focus {
+    color: $brown;
+    border-bottom: 1px solid $brown;
+
+  }
+  &:active {
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+  &--cart {
+    @include reset-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    svg {
+      color: $black;
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .header-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-row-gap: 51px;
+
+    padding: 53px calc(50% - 354px) 0px calc(50% - 353px);
+    margin: 0 15px;
+    border: none;
+  }
+
+  .header-top__button {
+    display: block;
+    justify-self: start;
+  }
+
+  .header-top form {
+    display: none;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    grid-row: 2/3;
+    grid-column: span 2;
+    padding-left: 12px;
+    background: $white-opacity;
+    border-radius: 21px;
+  }
+
+  .header-top__form-button {
+    svg {
+      color: white;
+    }
+  }
+
+  .header-top__right {
+    justify-self: end;
+  }
+
+  .header-top__link {
+    &--login {
+      display: none;
+    }
+    &--cart {
+      justify-content: flex-end;
+
+      &:hover {
+        svg {
+          color: $brown;
+        }
+       border-bottom: 1px solid transparent;
+      }
+      &:focus {
+        border-bottom: 1px solid transparent;
+      }
+
+      p {
+        display: none;
+      }
+
+      svg {
+        color: $black;
+        display: block;
+      }
+    }
+  }
+  .header-top__logo {
+    left: 50%;
+    top: 0px;
+    transform: translate(-50%, 40%);
+  }
+
+  .header-open-menu {
+    background-color: $brown;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    overflow-y: scroll;
+  }
+
+  .header-open-menu .header-top__button {
+    svg {
+      color: $white;
+    }
+  }
+
+  .header-open-menu .header-top form {
+    display: inline-flex;
+  }
+
+  .header-open-menu .header-top__form-button {
+    &:hover{
+      svg{
+        color:$white;
+      }
+    }
+    &:focus{
+svg{
+  color:$white;
+}
+    }
+
+  }
+
+  .header-open-menu .header-top__link {
+    &--cart {
+      svg {
+        color: $white;
+      }
+    }
+  }
+
+  .header-open-menu .header-top input {
+    width: 100%;
+    background: transparent;
+    color: $white;
+    border: none;
+    padding: 12px 0 6px 28px;
+
+    &::placeholder {
+      color: $white;
+      opacity: 0;
+    }
+    &:focus {
+      border: none;
+    }
+  }
+
+  .header-open-menu .header-top__logo {
+    svg {
+      color: white;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .header-top {
+    padding: 36px calc(50% - 605px) 0px;
+    grid-row-gap: 34px;
+  }
+  .header-top__logo{
+    transform: translate(-50%, 38%);
+    svg{
+      width:50px;
+    height: 50px;
+    }
+
+  }
+}

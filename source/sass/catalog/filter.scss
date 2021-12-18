@@ -1,0 +1,310 @@
+.filter {
+  margin-right: 20px;
+  &--page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    padding: 0 calc(50% - 234px);
+form{
+  width:100%;
+}
+  }
+}
+.filter form {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-fieldset-content {
+  display: none;
+}
+
+.filter-fieldset {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $brown;
+  border-bottom: none;
+  position: relative;
+  padding: 23px 0 25px 23px;
+  &:last-of-type {
+    padding: 25px 0 25px 23px;
+
+    border-bottom: 1px solid $brown;
+    margin-bottom: 35px;
+  }
+
+  &--active {
+    .filter-fieldset-content {
+      display: block;
+    }
+  }
+
+  &--collection {
+    padding: 23px 0 20px 23px;
+  }
+}
+.filter-fieldset h3 {
+  @include reset-block;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 21px;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 8px;
+    background: url("../img/icons/arrow-down.svg") no-repeat center;
+    background-size: cover;
+
+    top: 5px;
+    right: 24px;
+  }
+}
+
+.filter-fieldset--active h3 {
+  &::after {
+    background: url("../img/icons/arrow-up.svg") no-repeat center;
+    background-size: cover;
+  }
+}
+
+.filter-fieldset__list {
+  @include reset;
+  padding-top: 23px;
+}
+
+.filter-fieldset__item {
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+.filter-fieldset__item label {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  padding-left: 35px;
+  position: relative;
+}
+
+.filter-fieldset__item input + label::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+
+  background-color: transparent;
+  border: 1px solid $brown;
+  cursor: pointer;
+}
+
+.filter-fieldset__item input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+
+  background: $brown;
+  background-size: cover;
+}
+
+.filter-fieldset__item input:hover + label::before {
+  box-shadow: 0 0 2px 1px $brown;
+}
+
+.filter-fieldset__item input:hover + label {
+  color: $brown;
+  transition: 0.2s;
+}
+
+.filter-fieldset__range {
+  @include reset-block;
+  background: none;
+  width: 218px;
+}
+.filter-fieldset__controls {
+  position: relative;
+  height: 35px;
+  border-radius: 20px;
+  padding-left: 21px;
+  padding-right: 21px;
+  padding-top: 24px;
+  padding: 23px 0px 28px 21px;
+  box-sizing: border-box;
+}
+.filter-fieldset__scale {
+  width: 176px;
+  height: 2px;
+  background: $grey-light;
+  z-index: 10;
+}
+.filter-fieldset__bar {
+  width: 106px;
+  height: 2px;
+  background: $brown;
+  margin-left: 24px;
+}
+.filter-fieldset__toggle {
+  white-space: nowrap;
+  position: absolute;
+  top: 17px;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+
+  background: $brown;
+  border-radius: 50%;
+  cursor: pointer;
+  p {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: inherit;
+    padding-top: 8px;
+    margin-left: -9px;
+  }
+}
+.filter-fieldset__toggle--min {
+  left: 45px;
+}
+.filter-fieldset__toggle--max {
+  left: 150px;
+}
+.filter-form__button {
+  padding: 23px 0;
+  margin-bottom: 24px;
+  border: none;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: inherit;
+  &--reset {
+    background: transparent;
+    border: 1px solid $brown;
+  }
+
+  &:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+  }
+  &:focus {
+    transform: scale(1.03);
+    transition: 0.3s;
+  }
+  &:active {
+    transform: scale(0.9);
+    transition: 0.3s;
+  }
+}
+
+.filter-close {
+  display: none;
+  border: none;
+  background: transparent;
+
+  svg {
+    color: inherit;
+  }
+
+  &:hover {
+    svg {
+      color: $brown;
+    }
+    transform: scale(1.2);
+    transition: 0.3s;
+  }
+  &:focus {
+    svg {
+      color: $brown;
+    }
+    transform: scale(1.2);
+    transition: 0.3s;
+  }
+  &:active {
+    transform: scale(0.7);
+    transition: 0.3s;
+  }
+}
+
+.filter-open {
+  display: none;
+  width: 100%;
+  padding: 28px 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+@media (max-width: $tablet-width) {
+
+  .filter form {
+    display: none;
+  }
+  .filter-open {
+    display: block;
+    padding:24px 0;
+    margin-bottom: 50px;
+    width:100%;
+  }
+  .filter {
+    margin-right: 0;
+    &--page {
+      form {
+        display: flex;
+      }
+    }
+
+    .filter-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      left: 0;
+      top: 10px;
+      height: 100vh;
+
+      box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+      transition: all 0.5s;
+      transform: translateX(-110%);
+      background: $white;
+    }
+    &--active {
+      .filter-wrapper {
+        transition: all ease 0.5s;
+        transform: translateX(0%);
+      }
+
+      form {
+        display: flex;
+        height: 100%;
+        overflow-y: scroll;
+        position: relative;
+      }
+      .filter-fieldset {
+        border: none;
+        border-bottom: 1px solid $brown;
+      }
+      .filter-close {
+        display: block;
+        position: absolute;
+        top: -10px;
+        right: -20px;
+      }
+    }
+  }
+}
+@media (max-width: $mobile-width) {
+  .filter-open {
+
+    margin-bottom: 39px;
+
+  }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Producing jewellery of solid gold, silver or leather. Jewellery contains precious and semiprecious stones and crystals.">
+    <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/CormorantGaramond-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/CormorantGaramond-MediumItalic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/CormorantGaramond-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/CormorantGaramond-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/32.svg" type="image/svg+xml">
+    <title>Jewellery</title>
+</head>
+<body>
+   <div class="wrapper">
+
+     <header class="header header--page">
+      <a class="header-top__logo" href="main.html"><svg  width="66" height="66">
+        <use xlink:href="img/sprite/sprite.svg#logo"></use>
+      </svg></a>
+     </header>
+  <main>
+  <div class="container">
+    <section class="filter filter--page">
+
+      <h2 class="visually-hidden">Filter for catalog Chjewellery</h2>
+      <form method="get" action="https://echo.htmlacademy.ru">
+        <fieldset class="filter-fieldset">
+          <h3>Product</h3>
+          <ul class="filter-fieldset__list">
+            <li class="filter-fieldset__item">
+              <input class="visually-hidden" type="checkbox" id="Necklace" name="Necklace" checked>
+              <label for="Necklace">Necklaces</label>
+            </li>
+            <li class="filter-fieldset__item">
+              <input class="visually-hidden" type="checkbox" id="choker" name="choker" checked>
+              <label for="choker">Chokers</label>
+            </li>
+            <li class="filter-fieldset__item">
+              <input class="visually-hidden" type="checkbox" id="ring" name="ring">
+              <label for="ring">Rings</label>
+            </li>
+            <li class="filter-fieldset__item">
+              <input class="visually-hidden" type="checkbox" id="earring" name="earring" checked>
+              <label for="earring">Earrings</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter-fieldset">
+          <h3>Material</h3>
+          <ul class="filter-fieldset__list">
+            <li class="filter-fieldset__item">
+              <input class="visually-hidden" type="checkbox" id="gold" name="gold">
+              <label for="gold">Gold</label>
+            </li>
+            <li class="filter-fieldset__item">
+              <input class="visually-hidden" type="checkbox" id="silver" name="silver">
+              <label for="silver">Silver</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter-fieldset">
+          <h3>Collection</h3>
+          <ul class="filter-fieldset__list">
+            <li class="filter-fieldset__item">
+              <input class="visually-hidden" type="checkbox" id="pink-flamingo" name="pink-flamingo">
+              <label for="pink-flamingo">Pink flamingo</label>
+            </li>
+            <li class="filter-fieldset__item">
+              <input class="visually-hidden" type="checkbox" id="dream" name="dream">
+              <label for="dream">Dream</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter-fieldset">
+          <h3>Price</h3>
+          <div class="filter-fieldset__range">
+            <div class="filter-fieldset__controls">
+              <div class="filter-fieldset__scale">
+                <div class="filter-fieldset__bar"></div>
+              </div>
+              <div class="filter-fieldset__toggle filter-fieldset__toggle--min" aria-label="Минимальная цена">
+
+                <p>$ 55</p>
+              </div>
+
+              <div class="filter-fieldset__toggle filter-fieldset__toggle--max" aria-label="Максимальная цена">
+
+                <p>$ 55</p>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <button class="filter-form__button btn" type="submit" aria-label="Apply filter">Apply</button>
+        <button class="filter-form__button filter-form__button--reset" type="reset" aria-label="Reset filter">Clear
+          All</button>
+      </form>
+      <button class="filter-close" type="button" aria-label="Close filter"><svg width="32" height="32">
+          <use xlink:href="img/sprite/sprite.svg#filterclose"></use>
+        </svg></button>
+
+    </section>
+  </div>
+</div>
+  </main>
+   </div>
+   <script type="module" src="js/script.js"></script>
+</body>

@@ -1,0 +1,21 @@
+@import "global/variables.scss";
+@import "global/fonts.scss";
+@import "global/global.scss";
+@import "global/mixin.scss";
+
+// Block
+@import "index/navigation-block";
+@import "main/header.scss";
+@import "main/navigation.scss";
+@import "main/login.scss";
+@import "main/intro.scss";
+@import "main/slider.scss";
+@import "main/blog.scss";
+@import "main/questions.scss";
+@import "main/pin.scss";
+@import "main/footer.scss";
+@import "catalog/catalog-wrapper.scss";
+@import "catalog/goods.scss";
+@import "catalog/filter.scss";
+@import "catalog/catalog-pagination.scss";
+
