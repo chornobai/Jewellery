@@ -178,10 +178,11 @@ height: 15px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    grid-row-gap: 51px;
+    grid-row-gap: 61px;
 
     padding: 53px calc(50% - 354px) 0px calc(50% - 353px);
     margin: 0 15px;
+
     border: none;
   }
 
@@ -262,6 +263,7 @@ height: 15px;
 
   .header-open-menu .header-top form {
     display: inline-flex;
+
   }
 
   .header-open-menu .header-top__form-button {
@@ -312,7 +314,7 @@ svg{
 @media (max-width: $mobile-width) {
   .header-top {
     padding: 36px calc(50% - 605px) 0px;
-    grid-row-gap: 34px;
+    grid-row-gap: 47px;
   }
   .header-top__logo{
     transform: translate(-50%, 38%);
@@ -321,5 +323,9 @@ svg{
     height: 50px;
     }
 
+  }
+
+  .header-open-menu .header-top input {
+    padding: 10px 0 6px 28px;
   }
 }
