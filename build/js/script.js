@@ -90,10 +90,11 @@
 /*!*****************************!*\
   !*** ./source/js/filter.js ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: initFilter */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("var fitlerOpen = document.querySelector('.filter-open');\nvar filterClose = document.querySelector('.filter-close');\nvar filterBlock = document.querySelector('.filter');\nvar filterTriggers = filterBlock.querySelectorAll('h3');\nfitlerOpen.addEventListener('click', function (evt) {\n  evt.preventDefault();\n  filterBlock.classList.add('filter--active');\n});\nfilterClose.addEventListener('click', function (evt) {\n  evt.preventDefault();\n  filterBlock.classList.remove('filter--active');\n}); // Accordion\n\nfilterTriggers.forEach(function (item) {\n  item.addEventListener('click', function (evt) {\n    var block = item.closest('fieldset');\n    block.classList.toggle('filter-fieldset--active');\n  });\n});\n\n//# sourceURL=webpack:///./source/js/filter.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"initFilter\", function() { return initFilter; });\nfunction initFilter() {\n  var fitlerOpen = document.querySelector('.filter-open');\n  var filterClose = document.querySelector('.filter-close');\n  var filterBlock = document.querySelector('.filter');\n  var filterTriggers = filterBlock.querySelectorAll('h3');\n  fitlerOpen.addEventListener('click', function (evt) {\n    evt.preventDefault();\n    filterBlock.classList.add('filter--active');\n  });\n  filterClose.addEventListener('click', function (evt) {\n    evt.preventDefault();\n    filterBlock.classList.remove('filter--active');\n  }); // Accordion\n\n  filterTriggers.forEach(function (item) {\n    item.addEventListener('click', function (evt) {\n      var block = item.closest('fieldset');\n      block.classList.toggle('filter-fieldset--active');\n    });\n  });\n}\n\n\n\n//# sourceURL=webpack:///./source/js/filter.js?");
 
 /***/ }),
 
@@ -123,10 +124,11 @@ eval("var menuButton = document.querySelector('.header-top__button');\nvar menu 
 /*!*****************************************!*\
   !*** ./source/js/question-accordion.js ***!
   \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: initMainAccordion */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("var questionTriggers = document.querySelector('.questions').querySelectorAll('h3');\nquestionTriggers.forEach(function (item) {\n  item.addEventListener('click', function (evt) {\n    var block = item.closest('li');\n    block.classList.toggle('questions-item--active');\n  });\n});\n\n//# sourceURL=webpack:///./source/js/question-accordion.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"initMainAccordion\", function() { return initMainAccordion; });\nfunction initMainAccordion() {\n  var questionTriggers = document.querySelector('.questions').querySelectorAll('h3');\n  questionTriggers.forEach(function (item) {\n    item.addEventListener('click', function (evt) {\n      var block = item.closest('li');\n      block.classList.toggle('questions-item--active');\n    });\n  });\n}\n\n\n\n//# sourceURL=webpack:///./source/js/question-accordion.js?");
 
 /***/ }),
 
@@ -138,18 +140,7 @@ eval("var questionTriggers = document.querySelector('.questions').querySelectorA
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu.js */ \"./source/js/menu.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_menu_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _login_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./login.js */ \"./source/js/login.js\");\n/* harmony import */ var _login_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_login_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _slider_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./slider.js */ \"./source/js/slider.js\");\n/* harmony import */ var _slider_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_slider_js__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _filter_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./filter.js */ \"./source/js/filter.js\");\n/* harmony import */ var _filter_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_filter_js__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _question_accordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./question-accordion */ \"./source/js/question-accordion.js\");\n/* harmony import */ var _question_accordion__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_question_accordion__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\n\n//# sourceURL=webpack:///./source/js/script.js?");
-
-/***/ }),
-
-/***/ "./source/js/slider.js":
-/*!*****************************!*\
-  !*** ./source/js/slider.js ***!
-  \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("var offset = 0; // смещение от левого края\n\nvar sliderButtonLeft = document.querySelector('.slider-button--left');\nvar sliderButtonRight = document.querySelector('.slider-button--right');\nvar sliderPagination = document.querySelectorAll('.slider-pagination__item');\nvar sliderList = document.querySelector('.slider-row__list');\nsliderButtonRight.addEventListener('click', function (evt) {\n  evt.preventDefault();\n  offset = offset + 300;\n\n  if (offset > 2400) {\n    offset = 2400;\n  }\n\n  sliderList.style.left = -offset + 'px';\n});\nsliderButtonLeft.addEventListener('click', function (evt) {\n  evt.preventDefault();\n  offset = offset - 300;\n\n  if (offset < 0) {\n    offset = 0;\n  }\n\n  sliderList.style.left = -offset + 'px';\n});\n\n//# sourceURL=webpack:///./source/js/slider.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu.js */ \"./source/js/menu.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_menu_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _login_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./login.js */ \"./source/js/login.js\");\n/* harmony import */ var _login_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_login_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _filter_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./filter.js */ \"./source/js/filter.js\");\n/* harmony import */ var _question_accordion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./question-accordion */ \"./source/js/question-accordion.js\");\n\n // import  './slider.js';\n\n\n\nvar MAIN_PAGE = document.querySelector('.main');\nvar CATALOG_PAGE = document.querySelector('.main-catalog');\n\nif (CATALOG_PAGE) {\n  Object(_filter_js__WEBPACK_IMPORTED_MODULE_2__[\"initFilter\"])();\n} else {\n  Object(_question_accordion__WEBPACK_IMPORTED_MODULE_3__[\"initMainAccordion\"])();\n}\n\n//# sourceURL=webpack:///./source/js/script.js?");
 
 /***/ })
 

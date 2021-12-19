@@ -1,3 +1,5 @@
+function initMainAccordion(){
+
 const questionTriggers = document.querySelector('.questions').querySelectorAll('h3');
 
 questionTriggers.forEach((item) => {
@@ -7,3 +9,6 @@ block.classList.toggle('questions-item--active')
 
   });
 });
+}
+
+export {initMainAccordion};

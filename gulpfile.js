@@ -110,6 +110,9 @@ const scripts = () => {
       output:{
         filename:"script.js",
       },
+      optimization:{
+        minimize:false,
+      },
       module: {
         rules: [
           {
