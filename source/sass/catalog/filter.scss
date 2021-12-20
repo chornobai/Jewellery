@@ -1,21 +1,23 @@
 .filter {
   margin-right: 20px;
+
   &--page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width:100%;
+    width: 100%;
     padding: 0 calc(50% - 234px);
-form{
-  width:100%;
-}
+    form {
+      width: 100%;
+    }
   }
 }
+
 .filter form {
   display: flex;
   flex-direction: column;
-  width:250px;
+  width: 254px;
 }
 
 .filter-fieldset-content {
@@ -29,9 +31,8 @@ form{
   border-bottom: none;
   position: relative;
   padding: 23px 0 25px 23px;
-  &:last-of-type {
-    padding: 25px 0 25px 23px;
 
+  &:last-of-type {
     border-bottom: 1px solid $brown;
     margin-bottom: 35px;
   }
@@ -46,6 +47,7 @@ form{
     padding: 23px 0 20px 23px;
   }
 }
+
 .filter-fieldset h3 {
   @include reset-block;
   font-family: inherit;
@@ -53,6 +55,7 @@ form{
   font-weight: inherit;
   line-height: 21px;
   position: relative;
+
   &::after {
     position: absolute;
     content: "";
@@ -60,7 +63,6 @@ form{
     height: 8px;
     background: url("../img/icons/arrow-down.svg") no-repeat center;
     background-size: cover;
-
     top: 5px;
     right: 24px;
   }
@@ -83,6 +85,7 @@ form{
     margin-bottom: 12px;
   }
 }
+
 .filter-fieldset__item label {
   display: block;
   font-size: 14px;
@@ -131,6 +134,7 @@ form{
   background: none;
   width: 218px;
 }
+
 .filter-fieldset__controls {
   position: relative;
   height: 35px;
@@ -138,9 +142,10 @@ form{
   padding-left: 21px;
   padding-right: 21px;
   padding-top: 24px;
-  padding: 23px 0px 28px 21px;
+  padding: 27px 0px 25px 21px;
   box-sizing: border-box;
 }
+
 .filter-fieldset__scale {
   width: 176px;
   height: 2px;
@@ -153,6 +158,7 @@ form{
   background: $brown;
   margin-left: 24px;
 }
+
 .filter-fieldset__toggle {
   white-space: nowrap;
   position: absolute;
@@ -164,6 +170,7 @@ form{
   background: $brown;
   border-radius: 50%;
   cursor: pointer;
+
   p {
     font-size: 14px;
     line-height: 18px;
@@ -172,20 +179,25 @@ form{
     margin-left: -9px;
   }
 }
+
 .filter-fieldset__toggle--min {
   left: 45px;
 }
+
 .filter-fieldset__toggle--max {
   left: 150px;
 }
+
 .filter-form__button {
   padding: 23px 0;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
+  margin-right: 2px;
   border: none;
   font-family: inherit;
   font-size: 16px;
   line-height: 21px;
   font-weight: inherit;
+
   &--reset {
     background: transparent;
     border: 1px solid $brown;
@@ -195,10 +207,12 @@ form{
     transform: scale(1.03);
     transition: 0.3s;
   }
+
   &:focus {
     transform: scale(1.03);
     transition: 0.3s;
   }
+
   &:active {
     transform: scale(0.9);
     transition: 0.3s;
@@ -221,6 +235,7 @@ form{
     transform: scale(1.2);
     transition: 0.3s;
   }
+
   &:focus {
     svg {
       color: $brown;
@@ -228,6 +243,7 @@ form{
     transform: scale(1.2);
     transition: 0.3s;
   }
+
   &:active {
     transform: scale(0.7);
     transition: 0.3s;
@@ -244,68 +260,196 @@ form{
 }
 
 @media (max-width: $tablet-width) {
-
-  .filter form {
+  .filter-wrapper {
     display: none;
+    justify-content: center;
+    align-items: flex-start;
+    position: fixed;
+    left: 0;
+    top: 27px;
+    height: 100vh;
+    width: 55.6%;
+    box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    transition: all 0.5s;
+    transform: translateX(-110%);
+    background: $white;
   }
+
   .filter-open {
     display: block;
-    padding:24px 0;
+    padding: 24px 0;
     margin-bottom: 50px;
-    width:100%;
+    width: 100%;
   }
+
   .filter {
     margin-right: 0;
+
     &--page {
-      form {
+      .filter form {
         display: flex;
       }
     }
 
-    .filter-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-      left: 0;
-      top: 10px;
-      height: 100vh;
-
-      box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.2);
-      z-index: 10;
-      transition: all 0.5s;
-      transform: translateX(-110%);
-      background: $white;
-    }
     &--active {
       .filter-wrapper {
+        display: flex;
         transition: all ease 0.5s;
         transform: translateX(0%);
       }
+    }
 
-      form {
-        display: flex;
-        height: 100%;
-        overflow-y: scroll;
-        position: relative;
-      }
-      .filter-fieldset {
-        border: none;
-        border-bottom: 1px solid $brown;
-      }
-      .filter-close {
-        display: block;
-        position: absolute;
-        top: -10px;
-        right: -20px;
-      }
+    .filter-wrapper form {
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+
+      padding-bottom: 50px;
+    }
+  }
+
+  .filter-fieldset {
+    border: none;
+    border-bottom: 1px solid $brown;
+    padding: 35px 0px 35px 15px;
+    &:first-of-type {
+      padding: 42px 0px 37px 15px;
+    }
+  }
+
+  .filter-fieldset__item input + label::before {
+    top: 0px;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .filter-fieldset__item input:checked + label::after {
+    top: 0px;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+  }
+  .filter-fieldset__item label {
+    font-size: 16px;
+    padding-left: 39px;
+  }
+  .filter-fieldset__list {
+    padding: 27px 0 0 0;
+  }
+  .filter-fieldset__item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  .filter-close {
+    display: block;
+    position: absolute;
+    top: -10px;
+    right: -20px;
+  }
+  .filter-fieldset h3 {
+    font-size: 18px;
+    &::after {
+      width: 23px;
+      height: 12px;
+      right: 39px;
+    }
+  }
+  .filter-fieldset__controls {
+    padding: 35px 16px 35px 13px;
+  }
+  .filter-fieldset__scale {
+    width: 304px;
+  }
+  .filter-fieldset__bar {
+    width: 171px;
+    margin-left: 50px;
+  }
+  .filter-fieldset__toggle {
+    width: 20px;
+    height: 20px;
+    top: 26px;
+  }
+  .filter-fieldset__toggle--max {
+    left: 229px;
+  }
+  .filter-fieldset__toggle--min {
+    left: 53px;
+  }
+  .filter-form__button {
+    margin: 0 42px 0 16px;
+    &:not(:last-child) {
+      margin-bottom: 26px;
     }
   }
 }
+
 @media (max-width: $mobile-width) {
+  .filter-wrapper {
+    left: 0;
+    top: 0;
+padding:76px 25px 50px 25px;
+    box-shadow: none;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    overflow-y: scroll;
+  }
+
+  .filter-wrapper form {
+    width: 270px;
+    box-shadow: 1px -1px 10px rgba(0, 0, 0, 0.2);
+    padding-bottom: 30px;
+  }
+  .filter-close {
+    right: 3.2%;
+    top: 7.5%;
+  }
+
   .filter-open {
-
     margin-bottom: 39px;
+  }
+  .filter-fieldset {
+    &:first-of-type {
+      padding: 24px 0 28px 15px;
+    }
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
+    padding: 25px 0 26px 15px;
+  }
+  .filter-fieldset h3 {
+    &::after {
+      right: 20px;
+    }
+  }
 
+  .filter-fieldset__controls {
+    padding: 32px 16px 35px 13px;
+  }
+  .filter-fieldset__scale {
+    width: 230px;
+  }
+  .filter-fieldset__bar {
+    width: 120px;
+    margin-left: 35px;
+  }
+  .filter-fieldset__toggle {
+    width: 18px;
+    height: 18px;
+  }
+  .filter-fieldset__toggle--max {
+    left: 167px;
+  }
+  .filter-fieldset__toggle--min {
+    left: 29px;
+  }
+  .filter-form__button {
+    margin-right: 21px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 }

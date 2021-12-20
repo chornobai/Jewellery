@@ -184,6 +184,9 @@ height: 15px;
     margin: 0 15px;
 
     border: none;
+    &--catalog{
+      grid-row-gap: 51px;
+    }
   }
 
   .header-top__button {
@@ -210,6 +213,7 @@ height: 15px;
   }
 
   .header-top__right {
+    grid-column:2/-1;
     justify-self: end;
   }
 
@@ -245,6 +249,13 @@ height: 15px;
     top: 0px;
     transform: translate(-50%, 40%);
   }
+  .header-nojs{
+    background-color: $brown;
+  }
+  .header-nojs .header-top__button{
+    display: none;
+  }
+
 
   .header-open-menu {
     background-color: $brown;
@@ -255,18 +266,21 @@ height: 15px;
     overflow-y: scroll;
   }
 
-  .header-open-menu .header-top__button {
+  .header-open-menu .header-top__button,
+  .header-nojs .header-top__button {
     svg {
       color: $white;
     }
   }
 
-  .header-open-menu .header-top form {
+  .header-open-menu .header-top form,
+  .header-nojs .header-top form {
     display: inline-flex;
 
   }
 
-  .header-open-menu .header-top__form-button {
+  .header-open-menu .header-top__form-button,
+  .header-nojs .header-top__form-button {
     &:hover{
       svg{
         color:$white;
@@ -280,7 +294,8 @@ svg{
 
   }
 
-  .header-open-menu .header-top__link {
+  .header-open-menu .header-top__link,
+  .header-nojs .header-top__link {
     &--cart {
       svg {
         color: $white;
@@ -288,7 +303,8 @@ svg{
     }
   }
 
-  .header-open-menu .header-top input {
+  .header-open-menu .header-top input,
+  .header-nojs .header-top input {
     width: 100%;
     background: transparent;
     color: $white;
@@ -304,7 +320,8 @@ svg{
     }
   }
 
-  .header-open-menu .header-top__logo {
+  .header-open-menu .header-top__logo,
+  .header-nojs .header-top__logo {
     svg {
       color: white;
     }
@@ -314,7 +331,14 @@ svg{
 @media (max-width: $mobile-width) {
   .header-top {
     padding: 36px calc(50% - 605px) 0px;
-    grid-row-gap: 47px;
+    grid-row-gap: 34px;
+    &--catalog{
+      grid-row-gap: 34px;
+    }
+  }
+  .header-open-menu .header-top,
+  .header-nojs .header-top {
+   grid-row-gap:42px;
   }
   .header-top__logo{
     transform: translate(-50%, 38%);
@@ -325,7 +349,8 @@ svg{
 
   }
 
-  .header-open-menu .header-top input {
+  .header-open-menu .header-top input,
+  .header-nojs .header-top input  {
     padding: 10px 0 6px 28px;
   }
 }

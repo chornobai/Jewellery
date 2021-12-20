@@ -19,14 +19,40 @@
   <link rel="icon" href="img/favicon/32.svg" type="image/svg+xml">
   <title>CHjewellery</title>
 
+  <!-- <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-image: url('img/Main\ page.jpg');
 
+    }
+
+    @media (max-width: 1023px) {
+      HTML {
+        background-image: url('img/768\ Main\ page.jpg');
+      }
+    }
+
+    @media (max-width: 767px) {
+      HTML {
+        background-image: url('img/320\ Main.png');
+      }
+    }
+
+    /* Делаем слой с разметкой полупрозрачным */
+    BODY {
+      opacity: .7;
+
+    }
+  </style> -->
 
 </head>
 
 <body>
   <div class="wrapper">
     <!-- header-open-menu - for js-->
-    <header class="header">
+    <!-- header-nojs - no-js-->
+    <header class="header header-nojs">
 
       <div class="header-top">
 
@@ -58,11 +84,11 @@
 
           <nav class="header-bottom__navigation navigation">
             <ul class="navigation-list">
-              <li class="navigation-item"><a href="#" class="navigation-link">What’s new</a></li>
-              <li class="navigation-item"><a href="#" class="navigation-link">Chokers</a></li>
-              <li class="navigation-item"><a href="#" class="navigation-link">Necklaces</a></li>
-              <li class="navigation-item"><a href="#" class="navigation-link">Rings</a></li>
-              <li class="navigation-item"><a href="#" class="navigation-link">Earrings</a></li>
+              <li class="navigation-item"><a href="#blog" class="navigation-link">What’s new</a></li>
+              <li class="navigation-item"><a href="#slider" class="navigation-link">Chokers</a></li>
+              <li class="navigation-item"><a href="#slider" class="navigation-link">Necklaces</a></li>
+              <li class="navigation-item"><a href="#slider" class="navigation-link">Rings</a></li>
+              <li class="navigation-item"><a href="#slider" class="navigation-link">Earrings</a></li>
             </ul>
             <ul class="navigation-list navigation-list--info">
               <li class="navigation-item"><a href="#" class="navigation-link">About CH</a></li>
@@ -76,14 +102,14 @@
     </header>
     <main class="main">
       <h1 class="visually-hidden">СHjewellery - website for jewellerry of gold and silver</h1>
-      <section class="intro intro--catalog">
+      <section class="intro">
 
           <h2>PERFECTION</h2>
           <p>made to be yours</p>
 
       </section>
       <div class="container">
-        <section class="slider slider--main slider--catalog">
+        <section class="slider slider--main slider--catalog" id="slider">
           <h2>New in</h2>
           <a class="slider-link" href="catalog.html">Shop now</a>
           <button class="slider-button slider-button--left" type="button" aria-label="Прокрутка влево"></button>
@@ -413,7 +439,7 @@
 
           </div>
         </section>
-        <section class="blog">
+        <section class="blog" id="blog">
           <h2>Blog</h2>
           <a class="blog-link" href="#">Read all</a>
           <div class="blog-wrapper">

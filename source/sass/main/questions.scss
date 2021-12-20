@@ -88,12 +88,12 @@ br{
   }
   .questions-item h3{
     &::after{
+      top:7px;
       width:23px;
       height: 12px;
 
     }
   }
-
 }
 @media (max-width: $mobile-width) {
   .questions{

@@ -1,5 +1,5 @@
 .goods {
-  margin-bottom: 33px;
+margin-bottom: 77px;
 }
 
 .goods-list {
@@ -8,6 +8,7 @@
   grid-template-columns:1fr 1fr 1fr;
   grid-column-gap: 30px;
   grid-row-gap: 35px;
+  margin-bottom: 68px;
 }
 
 .goods-filter-button{
@@ -19,8 +20,19 @@ width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  &:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+  }
+  &:focus{
+    transform: scale(1.1);
+    transition: 0.2s;
+  }
 
-
+  &:active{
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
 }
 
 .goods-link img{
@@ -48,10 +60,14 @@ font-weight: 700;
 
 
 @media (max-width: $tablet-width) {
+  .goods{
+    margin-bottom: 2px;
+  }
   .goods-list{
       grid-template-columns:1fr 1fr 1fr;
       grid-column-gap: 30px;
       grid-row-gap: 35px;
+      margin-bottom: 36px;
 
  }
  .goods-link{
@@ -63,9 +79,11 @@ font-weight: 700;
       grid-template-columns:1fr 1fr;
       grid-column-gap: 30px;
       grid-row-gap: 25px;
+      justify-items: center;
+margin-bottom: 33px;
  }
     .goods-link{
-      max-width: 130px;
+      min-width: 130px;
     }
 
     .goods-link img{

@@ -41,16 +41,16 @@
     /* Делаем слой с разметкой полупрозрачным */
     BODY {
       opacity: .7;
-      /* filter:invert(0.5); */
+      /* filter:invert(0.6); */
     }
   </style> -->
 </head>
 
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header class="header header-nojs">
 
-      <div class="header-top">
+      <div class="header-top header-top--catalog">
 
         <button class="header-top__button" type="button" aria-label="Open menu"><svg  width="25" height="18">
           <use xlink:href="img/sprite/sprite.svg#burger"></use>
@@ -106,8 +106,8 @@
 
 
       </section>
-      <div class="container catalog-wrapper">
-
+      <div class="catalog-wrapper">
+<div class="container">
         <section class="filter">
           <h2 class="visually-hidden">Filter for catalog Chjewellery</h2>
           <div class="filter-wrapper">
@@ -133,7 +133,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="filter-fieldset">
+              <fieldset class="filter-fieldset filter-fieldset--material">
                 <h3>Material</h3>
                 <ul class="filter-fieldset__list filter-fieldset-content">
                   <li class="filter-fieldset__item">
@@ -182,11 +182,11 @@
               <button class="filter-form__button filter-form__button--reset" type="reset"
                 aria-label="Reset filter">Clear
                 All</button>
-
-            </form>
-            <button class="filter-close" type="button" aria-label="Close filter"><svg width="32" height="32">
+ <button class="filter-close" type="button" aria-label="Close filter"><svg width="32" height="32">
                 <use xlink:href="img/sprite/sprite.svg#filterclose"></use>
               </svg></button>
+            </form>
+
           </div>
 
           <a href="filter.html" class="filter-open btn" aria-label="Filter-button">Filter</a>
@@ -507,10 +507,7 @@
               </a>
             </li>
           </ul>
-        </section>
-
-      </div>
-      <section class="catalog-pagination">
+          <section class="goods-pagination catalog-pagination">
 
           <h2 class="visually-hidden">Catalog pagination</h2>
           <button class="catalog-pagination-button catalog-pagination-button--prev"
@@ -528,6 +525,10 @@
             aria-label="Previous page">Next</button>
 
         </section>
+        </section>
+      </div>
+      </div>
+
 
     </main>
     <footer class="footer">

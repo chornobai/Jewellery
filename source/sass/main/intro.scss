@@ -22,6 +22,7 @@
       background: $brown url('../../img/bg/catalog-desktop@2x.jpg')no-repeat center;
       background-size: cover;
     }
+
   }
 }
 
@@ -33,19 +34,10 @@
   line-height: 130%;
   letter-spacing: 0.03em;
   color: $white;
-  padding-left: 2px;
-  margin: -15px 0 15px 0;
+  padding-left: 0px;
+  margin: -10px 0 15px 0;
 }
 
-.intro--catalog h2{
-
-    font-size: 34px;
-    line-height: 130%;
-    font-weight: 700;
-letter-spacing: 0;
-    margin: -2px 0 9px 0px;
-
-}
 
 .intro p{
   @include reset-block;
@@ -60,18 +52,29 @@ letter-spacing: 0;
 
 }
 
-.intro--catalog p{
-  font-size:22px;
-  line-height: 28px;
-  font-weight: 500;
-}
+ .intro--catalog h2{
+
+    font-size: 34px;
+    line-height: 130%;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin: -2px 0 9px 0px;
+    }
+
+  .intro--catalog p{
+      font-size:22px;
+      line-height: 28px;
+      font-weight: 500;
+    }
+
+
 
 @media (max-width: $tablet-width) {
   .intro{
   background: $brown url('../img/bg/intro-tablet.jpg')no-repeat center;
   background-size: cover;
-  min-height:463px;
-  margin-bottom: 72px;
+  min-height:454px;
+  margin-bottom: 71px;
   @media (min-resolution: 2dppx) {
     background: $brown url('../img/bg/intro-tablet@2x.jpg')no-repeat center;
     background-size: cover;
@@ -94,7 +97,13 @@ letter-spacing: 0;
 .intro h2{
   padding-right:0;
   padding-left:0;
-  margin:0;
+  margin:-12px 0 0px -13px;
+}
+
+
+.intro p{
+  padding-right: 15px;
+  line-height: 122%;
 }
 
 .intro--catalog h2{
@@ -105,10 +114,6 @@ letter-spacing: 0;
 letter-spacing: 0;
   margin: -2px 0 9px 0px;
 
-}
-.intro p{
-  padding-right: 15px;
-  line-height: 122%;
 }
 
 .intro--catalog p{
@@ -121,32 +126,41 @@ letter-spacing: 0;
 
 @media (max-width: $mobile-width) {
   .intro{
+    margin-bottom: 60px;
+    min-height: 465px;
+
+    &--catalog{
+    min-height: 261px;
     margin-bottom: 40px;
+    }
   }
+
+
+
   .intro h2{
     font-size: 38px;
+    margin:0;
 padding:0;
   }
 
-  .intro--catalog h2{
-
-  font-size: 34px;
-  line-height: 130%;
-  font-weight: 700;
-letter-spacing: 0;
-  margin: -2px 0 9px 0px;
-
-}
   .intro p{
     font-size: 34px;
 padding:0;
   }
+  .intro--catalog h2{
+    font-size: 34px;
+line-height: 130%;
+font-weight: 700;
+letter-spacing: 0;
+margin: -1px 0 9px -4px;
 
-  .intro--catalog p{
-    text-align: center;
-    font-size:22px;
-    line-height: 28px;
-    font-weight: 500;
-    padding:0 12px;
+}
+
+   .intro--catalog   p{
+       text-align: center;
+font-size:22px;
+line-height: 28px;
+font-weight: 500;
+padding:0 12px;
   }
 }
