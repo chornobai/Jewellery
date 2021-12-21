@@ -1,24 +1,51 @@
-let offset = 0;  // смещение от левого края
-const sliderButtonLeft= document.querySelector('.slider-button--left');
-const sliderButtonRight= document.querySelector('.slider-button--right');
-const sliderPagination = document.querySelectorAll ('.slider-pagination__item');
-const sliderList = document.querySelector('.slider-row__list');
+import Swiper from './vendor/swiper-bundle.js';
 
-sliderButtonRight.addEventListener('click', function(evt){
-  evt.preventDefault();
-  offset = offset + 300;
-  if(offset > 2400){
-    offset = 2400;
+function initSwiper(){
+  const slider = new Swiper('.slider', {
+slidesPerView:4,
+slidesPerGroup:4,
+spaceBetween:30,
+loop:true,
+
+simulateTouch:false,
+
+  breackpoints: {
+    320: {
+      slidesPerView:2,
+      slidesPerGroup:2,
+      simulateTouch:true,
+    },
+767:{
+simulateTouch:false,
+},
+1023:{
+  slidesPerView:4,
+slidesPerGroup:4,
+simulateTouch:false,
+},
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  pagination: {
+    el: '.swiper-pagination',
+
+    clickable:true,
+
+    renderBullet: function (index, className){
+      return '<span class="' + className + '">' + (index + 1) + '</span>';
+    },
+
   }
-  sliderList.style.left =  - offset + 'px';
-});
 
 
-sliderButtonLeft.addEventListener('click', function(evt){
-  evt.preventDefault();
-  offset = offset - 300;
-  if(offset < 0){
-    offset = 0;
-  }
-  sliderList.style.left =  - offset + 'px';
+
+
+
+
 });
+}
+
+export {initSwiper};

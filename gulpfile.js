@@ -104,11 +104,11 @@ exports.copyImages = copyImages;
 
 //Scripts
 const scripts = () => {
-  return gulp.src("source/js/script.js")
+  return gulp.src("source/js/main.js")
       .pipe(webpackStream({
         mode: 'development',
       output:{
-        filename:"script.js",
+        filename:"main.js",
       },
       optimization:{
         minimize:false,
@@ -134,8 +134,6 @@ const scripts = () => {
       console.error('WEBPACK ERROR', err);
       this.emit('end'); // Don't stop the rest of the task
     })
-    .pipe(sourcemap.init())
-    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 
@@ -182,6 +180,22 @@ const copy = (done) => {
 
 exports.copy = copy;
 
+//Copy vendor
+
+const copyVendor = (done) => {
+  gulp.src(
+
+    "source/js/vendor/swiper-bundle.js",
+  {
+    base: "source"
+  })
+  .pipe(rename("vendor.js"))
+    .pipe(gulp.dest("build/js"))
+  done();
+}
+
+exports.copyVendor = copyVendor;
+
 //Clean
 
 const clean = () => {
@@ -211,6 +225,7 @@ exports.default = gulp.series(
   clean,
   copy,
   copyImages,
+  copyVendor,
   gulp.parallel(
     styles,
     html,
