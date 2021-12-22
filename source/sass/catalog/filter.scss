@@ -192,7 +192,7 @@
   left: 150px;
 }
 
-.filter-form__button {
+.filter-button {
   padding: 23px 0;
   margin-bottom: 25px;
   margin-right: 2px;
@@ -312,7 +312,7 @@
         display: none;
       }
 
-      .filter-form__button {
+      .filter-button {
         margin: 0 20px;
       }
     }
@@ -417,7 +417,7 @@
     left: 53px;
   }
 
-  .filter-form__button {
+  .filter-button {
     margin: 0 42px 0 16px;
 
     &:not(:last-child) {
@@ -497,7 +497,7 @@
     left: 29px;
   }
 
-  .filter-form__button {
+  .filter-button {
     margin-right: 21px;
 
     &:not(:last-child) {
