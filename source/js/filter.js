@@ -1,6 +1,6 @@
 function initFilter() {
 
-  const fitlerOpen = document.querySelector('.filter-open');
+  const filterOpen = document.querySelector('.filter-open');
   const filterClose = document.querySelector('.filter-close');
   const filterBlock = document.querySelector('.filter');
   const filterTriggers = filterBlock.querySelectorAll('h3');
@@ -8,7 +8,7 @@ function initFilter() {
   filterBlock.classList.remove('filter--nojs');
   // --- Открыть фильтр
 
-  fitlerOpen.addEventListener('click', (evt) => {
+  filterOpen.addEventListener('click', (evt) => {
     evt.preventDefault();
     filterBlock.classList.add('filter--active');
   });

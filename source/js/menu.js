@@ -5,7 +5,7 @@ const menuLinks = document.querySelectorAll('.navigation-link');
 menu.classList.remove('header-nojs');
 
 menuButton.addEventListener('click', (evt)=> {
-  evt.preventDefault;
+  evt.preventDefault();
   menu.classList.toggle('header-open-menu');
 });
 

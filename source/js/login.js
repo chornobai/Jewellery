@@ -3,7 +3,7 @@ const LOGIN_OVERLAY = 'login-wrapper--overlay';
 const loginLinks = document.querySelectorAll('.login-link');
 const loginBlock = document.querySelector('.login-wrapper');
 const loginClose = loginBlock.querySelector('.login-top-button');
-const loginMail = loginBlock.querySelector('#emain-login');
+const loginMail = loginBlock.querySelector('#email-login');
 const loginForm = loginBlock.querySelector('form');
 
 // Проверка - поддерживает ли браузер запись в LocalStorage //

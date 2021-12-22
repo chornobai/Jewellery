@@ -39,12 +39,7 @@
   font-weight: 500;
   line-height: 130%;
   cursor: pointer;
-
   position: relative;
-
-  br {
-    display: none;
-  }
 
   &::after {
     position: absolute;
@@ -56,6 +51,10 @@
     top: 9px;
     right: 48px;
   }
+}
+
+.questions-item br {
+  display: none;
 }
 
 .questions-item p {
@@ -129,15 +128,15 @@
     font-size: 16px;
     line-height: 22.4px;
 
-    br {
-      display: block;
-    }
-
     &::after {
       width: 20px;
       height: 10px;
       right: 25px;
     }
+  }
+
+  .questions-item br {
+    display: block;
   }
 
   .questions-item p {
