@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Producing jewellery of solid gold, silver or leather. Jewellery contains precious and semiprecious stones and crystals.">
-    <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -19,7 +19,7 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/32.svg" type="image/svg+xml">
   <title>CHjewellery</title>
-<!--
+
   <style>
     HTML {
       background-repeat: no-repeat;
@@ -42,10 +42,11 @@
 
     /* Делаем слой с разметкой полупрозрачным */
     BODY {
-      opacity: .7;
+      opacity: .9;
+      filter: invert(0.2);
 
     }
-  </style> -->
+  </style>
 
 </head>
 
@@ -57,22 +58,23 @@
 
       <div class="header-top">
 
-        <button class="header-top__button" type="button" aria-label="Open menu"><svg  width="25" height="18">
-          <use xlink:href="img/sprite/sprite.svg#burger"></use>
-        </svg></button>
-        <form method="post" action="https://echo.htmlacademy.ru">
-          <button class="header-top__form-button" type="submit" aria-label="Search"><svg  width="14" height="14">
-            <use xlink:href="img/sprite/sprite.svg#search"></use>
+        <button class="header-top__button" type="button" aria-label="Open menu"><svg width="25" height="18">
+            <use xlink:href="img/sprite/sprite.svg#burger"></use>
           </svg></button>
+        <form method="post" action="https://echo.htmlacademy.ru">
+          <button class="header-top__form-button" type="submit" aria-label="Search"><svg width="14" height="14">
+              <use xlink:href="img/sprite/sprite.svg#search"></use>
+            </svg></button>
           <label class="visually-hidden" for="search"></label>
           <input type="text" id="search" name="search" placeholder="Type here to search">
         </form>
-        <a class="header-top__logo" href="#"><svg  width="66" height="66">
-          <use xlink:href="img/sprite/sprite.svg#logo"></use>
-        </svg></a>
+        <a class="header-top__logo" href="#"><svg width="66" height="66">
+            <use xlink:href="img/sprite/sprite.svg#logo"></use>
+          </svg></a>
         <div class="header-top__right">
           <a class="header-top__link header-top__link--login login-link" href="login.html">Login</a>
-          <a class="header-top__link header-top__link--cart" href="#" aria-label="Корзина"> <p>Cart <span class="cart-count">0</span></p>
+          <a class="header-top__link header-top__link--cart" href="#" aria-label="Корзина">
+            <p>Cart <span class="cart-count">0</span></p>
             <svg class="header-top__cart-icon" width="20" height="18">
               <use xlink:href="img/sprite/sprite.svg#cart"></use>
             </svg>
@@ -81,32 +83,33 @@
         </div>
       </div>
 
-        <div class="header-bottom">
+      <div class="header-bottom">
 
-          <nav class="header-bottom__navigation navigation">
-            <ul class="navigation-list">
-              <li class="navigation-item"><a href="#blog" class="navigation-link">What’s new</a></li>
-              <li class="navigation-item"><a href="#slider" class="navigation-link">Chokers</a></li>
-              <li class="navigation-item"><a href="#slider" class="navigation-link">Necklaces</a></li>
-              <li class="navigation-item"><a href="#slider" class="navigation-link">Rings</a></li>
-              <li class="navigation-item"><a href="#slider" class="navigation-link">Earrings</a></li>
-            </ul>
-            <ul class="navigation-list navigation-list--info">
-              <li class="navigation-item"><a href="#" class="navigation-link">About CH</a></li>
-              <li class="navigation-item"><a href="#" class="navigation-link">Stores & Hours</a></li>
-              <li class="navigation-item"><a href="#" class="navigation-link">Contact Us</a></li>
-              <li class="navigation-item"><a class="navigation-link navigation-link--login login-link" href="login.html">Login</a></li>
-            </ul>
-          </nav>
-        </div>
+        <nav class="header-bottom__navigation navigation">
+          <ul class="navigation-list">
+            <li class="navigation-item"><a href="#blog" class="navigation-link">What’s new</a></li>
+            <li class="navigation-item"><a href="#slider" class="navigation-link">Chokers</a></li>
+            <li class="navigation-item"><a href="#slider" class="navigation-link">Necklaces</a></li>
+            <li class="navigation-item"><a href="#slider" class="navigation-link">Rings</a></li>
+            <li class="navigation-item"><a href="#slider" class="navigation-link">Earrings</a></li>
+          </ul>
+          <ul class="navigation-list navigation-list--info">
+            <li class="navigation-item"><a href="#" class="navigation-link">About CH</a></li>
+            <li class="navigation-item"><a href="#" class="navigation-link">Stores & Hours</a></li>
+            <li class="navigation-item"><a href="#" class="navigation-link">Contact Us</a></li>
+            <li class="navigation-item"><a class="navigation-link navigation-link--login login-link"
+                href="login.html">Login</a></li>
+          </ul>
+        </nav>
+      </div>
 
     </header>
     <main class="main">
       <h1 class="visually-hidden">СHjewellery - website for jewellerry of gold and silver</h1>
       <section class="intro">
 
-          <h2>PERFECTION</h2>
-          <p>made to be yours</p>
+        <h2>PERFECTION</h2>
+        <p>made to be yours</p>
 
       </section>
       <div class="container">
@@ -114,444 +117,439 @@
           <h2>New in</h2>
           <a class="slider-link" href="catalog.html">Shop now</a>
 
-            <ul class="slider-list swiper-wrapper">
-              <li class="slider-item swiper-slide">
-                <a class="slider-item__link" href="#">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)"
-                      srcset="img/content/main/1-mobile-main.webp 1x, img/content/main/1-mobile-main@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1023px)"
-                      srcset="img/content/main/1-tablet-main.webp 1x, img/content/main/1-tablet-main@2x.webp 2x">
+          <ul class="slider-list swiper-wrapper">
+            <li class="slider-item swiper-slide">
+              <a class="slider-item__link" href="#">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="img/content/main/1-mobile-main.webp 1x, img/content/main/1-mobile-main@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/content/main/1-tablet-main.webp 1x, img/content/main/1-tablet-main@2x.webp 2x">
 
-                    <source type="image/webp"
-                      srcset="img/content/main/1-desktop-main.webp 1x, img/content/main/1-desktop-main@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/content/main/1-desktop-main.webp 1x, img/content/main/1-desktop-main@2x.webp 2x">
 
-                    <!-- 1х: 324px; 2x: 648px -->
-                    <source media="(max-width: 1023px)"
-                      srcset="img/content/main/1-tablet-main.jpg 1x, img/content/main/1-tablet-main@2x.jpg 2x">
-                    <!-- 1х: 130px; 2x:260px -->
-                    <source media="(max-width: 767px)"
-                      srcset="img/content/main/1-mobile-main.jpg 1x, img/content/main/1-mobile-main@2x.jpg 2x">
-                    <!-- 1х: 270px; 2x: 540px -->
-                    <img loading="lazy" src="img/content/main/1-desktop-main.jpg"
-                      srcset="img/content/main/1-desktop-main@2x.jpg 2x" alt="Necklace with amethyst" width="270"
-                      height="284">
-                  </picture>
-                  <h3>Necklace with amethyst </h3>
-                  <p>$ 145</p>
-                </a>
-              </li>
-              <li class="slider-item swiper-slide">
-                <a class="slider-item__link" href="#">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)"
-                      srcset="img/content/main/2-mobile-main.webp 1x, img/content/main/2-mobile-main@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1023px)"
-                      srcset="img/content/main/2-tablet-main.webp 1x, img/content/main/2-tablet-main@2x.webp 2x">
+                  <!-- 1х: 324px; 2x: 648px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/content/main/1-tablet-main.jpg 1x, img/content/main/1-tablet-main@2x.jpg 2x">
+                  <!-- 1х: 130px; 2x:260px -->
+                  <source media="(max-width: 767px)"
+                    srcset="img/content/main/1-mobile-main.jpg 1x, img/content/main/1-mobile-main@2x.jpg 2x">
+                  <!-- 1х: 270px; 2x: 540px -->
+                  <img loading="lazy" src="img/content/main/1-desktop-main.jpg"
+                    srcset="img/content/main/1-desktop-main@2x.jpg 2x" alt="Necklace with amethyst" width="270"
+                    height="284">
+                </picture>
+                <h3>Necklace with amethyst </h3>
+                <p>$ 145</p>
+              </a>
+            </li>
+            <li class="slider-item swiper-slide">
+              <a class="slider-item__link" href="#">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="img/content/main/2-mobile-main.webp 1x, img/content/main/2-mobile-main@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/content/main/2-tablet-main.webp 1x, img/content/main/2-tablet-main@2x.webp 2x">
 
-                    <source type="image/webp"
-                      srcset="img/content/main/2-desktop-main.webp 1x, img/content/main/2-desktop-main@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/content/main/2-desktop-main.webp 1x, img/content/main/2-desktop-main@2x.webp 2x">
 
-                    <!-- 1х: 324px; 2x: 648px -->
-                    <source media="(max-width: 1023px)"
-                      srcset="img/content/main/2-tablet-main.jpg 1x, img/content/main/2-tablet-main@2x.jpg 2x">
-                    <!-- 1х: 130px; 2x:260px -->
-                    <source media="(max-width: 767px)"
-                      srcset="img/content/main/2-mobile-main.jpg 1x, img/content/main/2-mobile-main@2x.jpg 2x">
-                    <!-- 1х: 270px; 2x: 540px -->
-                    <img loading="lazy" src="img/content/main/2-desktop-main.jpg"
-                      srcset="img/content/main/2-desktop-main@2x.jpg 2x" alt="Layered сhoker" width="270"
-                      height="284">
-                  </picture>
-                  <h3>Layered сhoker</h3>
-                  <p>$ 115</p>
-                </a>
-              </li>
-              <li class="slider-item swiper-slide">
-                <a class="slider-item__link" href="#">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)"
-                      srcset="img/content/main/3-mobile-main.webp 1x, img/content/main/3-mobile-main@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1023px)"
-                      srcset="img/content/main/3-tablet-main.webp 1x, img/content/main/3-tablet-main@2x.webp 2x">
+                  <!-- 1х: 324px; 2x: 648px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/content/main/2-tablet-main.jpg 1x, img/content/main/2-tablet-main@2x.jpg 2x">
+                  <!-- 1х: 130px; 2x:260px -->
+                  <source media="(max-width: 767px)"
+                    srcset="img/content/main/2-mobile-main.jpg 1x, img/content/main/2-mobile-main@2x.jpg 2x">
+                  <!-- 1х: 270px; 2x: 540px -->
+                  <img loading="lazy" src="img/content/main/2-desktop-main.jpg"
+                    srcset="img/content/main/2-desktop-main@2x.jpg 2x" alt="Layered сhoker" width="270" height="284">
+                </picture>
+                <h3>Layered сhoker</h3>
+                <p>$ 115</p>
+              </a>
+            </li>
+            <li class="slider-item swiper-slide">
+              <a class="slider-item__link" href="#">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="img/content/main/3-mobile-main.webp 1x, img/content/main/3-mobile-main@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/content/main/3-tablet-main.webp 1x, img/content/main/3-tablet-main@2x.webp 2x">
 
-                    <source type="image/webp"
-                      srcset="img/content/main/3-desktop-main.webp 1x, img/content/main/3-desktop-main@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/content/main/3-desktop-main.webp 1x, img/content/main/3-desktop-main@2x.webp 2x">
 
-                    <!-- 1х: 324px; 2x: 648px -->
-                    <source media="(max-width: 1023px)"
-                      srcset="img/content/main/3-tablet-main.jpg 1x, img/content/main/3-tablet-main@2x.jpg 2x">
-                    <!-- 1х: 130px; 2x:260px -->
-                    <source media="(max-width: 767px)"
-                      srcset="img/content/main/3-mobile-main.jpg 1x, img/content/main/3-mobile-main@2x.jpg 2x">
-                    <!-- 1х: 270px; 2x: 540px -->
-                    <img loading="lazy" src="img/content/main/3-desktop-main.jpg"
-                      srcset="img/content/main/3-desktop-main@2x.jpg 2x" alt="Gold chain" width="270"
-                      height="284">
-                  </picture>
-                  <h3>Gold chain</h3>
-                  <p>$ 215</p>
-                </a>
-              </li>
-              <li class="slider-item swiper-slide">
-                <a class="slider-item__link" href="#">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)"
-                      srcset="img/content/main/4-mobile-main.webp 1x, img/content/main/4-mobile-main@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1023px)"
-                      srcset="img/content/main/4-tablet-main.webp 1x, img/content/main/4-tablet-main@2x.webp 2x">
+                  <!-- 1х: 324px; 2x: 648px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/content/main/3-tablet-main.jpg 1x, img/content/main/3-tablet-main@2x.jpg 2x">
+                  <!-- 1х: 130px; 2x:260px -->
+                  <source media="(max-width: 767px)"
+                    srcset="img/content/main/3-mobile-main.jpg 1x, img/content/main/3-mobile-main@2x.jpg 2x">
+                  <!-- 1х: 270px; 2x: 540px -->
+                  <img loading="lazy" src="img/content/main/3-desktop-main.jpg"
+                    srcset="img/content/main/3-desktop-main@2x.jpg 2x" alt="Gold chain" width="270" height="284">
+                </picture>
+                <h3>Gold chain</h3>
+                <p>$ 215</p>
+              </a>
+            </li>
+            <li class="slider-item swiper-slide">
+              <a class="slider-item__link" href="#">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="img/content/main/4-mobile-main.webp 1x, img/content/main/4-mobile-main@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/content/main/4-tablet-main.webp 1x, img/content/main/4-tablet-main@2x.webp 2x">
 
-                    <source type="image/webp"
-                      srcset="img/content/main/4-desktop-main.webp 1x, img/content/main/4-desktop-main@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/content/main/4-desktop-main.webp 1x, img/content/main/4-desktop-main@2x.webp 2x">
 
-                    <!-- 1х: 324px; 2x: 648px -->
-                    <source media="(max-width: 1023px)"
-                      srcset="img/content/main/4-tablet-main.jpg 1x, img/content/main/4-tablet-main@2x.jpg 2x">
-                    <!-- 1х: 130px; 2x:260px -->
-                    <source media="(max-width: 767px)"
-                      srcset="img/content/main/4-mobile-main.jpg 1x, img/content/main/4-mobile-main@2x.jpg 2x">
-                    <!-- 1х: 270px; 2x: 540px -->
-                    <img loading="lazy" src="img/content/main/4-desktop-main.jpg"
-                      srcset="img/content/main/4-desktop-main@2x.jpg 2x" alt="Galaxy earrings" width="270"
-                      height="284">
-                  </picture>
-                  <h3>Galaxy earrings</h3>
-                  <p>$ 95</p>
-                </a>
-              </li>
-              <li class="slider-item swiper-slide">
-                <a class="slider-item__link" href="#">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)"
-                      srcset="img/content/main/1-mobile-main.webp 1x, img/content/main/1-mobile-main@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1023px)"
-                      srcset="img/content/main/1-tablet-main.webp 1x, img/content/main/1-tablet-main@2x.webp 2x">
+                  <!-- 1х: 324px; 2x: 648px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/content/main/4-tablet-main.jpg 1x, img/content/main/4-tablet-main@2x.jpg 2x">
+                  <!-- 1х: 130px; 2x:260px -->
+                  <source media="(max-width: 767px)"
+                    srcset="img/content/main/4-mobile-main.jpg 1x, img/content/main/4-mobile-main@2x.jpg 2x">
+                  <!-- 1х: 270px; 2x: 540px -->
+                  <img loading="lazy" src="img/content/main/4-desktop-main.jpg"
+                    srcset="img/content/main/4-desktop-main@2x.jpg 2x" alt="Galaxy earrings" width="270" height="284">
+                </picture>
+                <h3>Galaxy earrings</h3>
+                <p>$ 95</p>
+              </a>
+            </li>
+            <li class="slider-item swiper-slide">
+              <a class="slider-item__link" href="#">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="img/content/main/1-mobile-main.webp 1x, img/content/main/1-mobile-main@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/content/main/1-tablet-main.webp 1x, img/content/main/1-tablet-main@2x.webp 2x">
 
-                    <source type="image/webp"
-                      srcset="img/content/main/1-desktop-main.webp 1x, img/content/main/1-desktop-main@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/content/main/1-desktop-main.webp 1x, img/content/main/1-desktop-main@2x.webp 2x">
 
-                    <!-- 1х: 324px; 2x: 648px -->
-                    <source media="(max-width: 1023px)"
-                      srcset="img/content/main/1-tablet-main.jpg 1x, img/content/main/1-tablet-main@2x.jpg 2x">
-                    <!-- 1х: 130px; 2x:260px -->
-                    <source media="(max-width: 767px)"
-                      srcset="img/content/main/1-mobile-main.jpg 1x, img/content/main/1-mobile-main@2x.jpg 2x">
-                    <!-- 1х: 270px; 2x: 540px -->
-                    <img loading="lazy" src="img/content/main/1-desktop-main.jpg"
-                      srcset="img/content/main/1-desktop-main@2x.jpg 2x" alt="Necklace with amethyst" width="270"
-                      height="284">
-                  </picture>
-                  <h3>Necklace with amethyst </h3>
-                  <p>$ 145</p>
-                </a>
-              </li>
-              <li class="slider-item swiper-slide">
-                <a class="slider-item__link" href="#">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)"
-                      srcset="img/content/main/2-mobile-main.webp 1x, img/content/main/2-mobile-main@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1023px)"
-                      srcset="img/content/main/2-tablet-main.webp 1x, img/content/main/2-tablet-main@2x.webp 2x">
+                  <!-- 1х: 324px; 2x: 648px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/content/main/1-tablet-main.jpg 1x, img/content/main/1-tablet-main@2x.jpg 2x">
+                  <!-- 1х: 130px; 2x:260px -->
+                  <source media="(max-width: 767px)"
+                    srcset="img/content/main/1-mobile-main.jpg 1x, img/content/main/1-mobile-main@2x.jpg 2x">
+                  <!-- 1х: 270px; 2x: 540px -->
+                  <img loading="lazy" src="img/content/main/1-desktop-main.jpg"
+                    srcset="img/content/main/1-desktop-main@2x.jpg 2x" alt="Necklace with amethyst" width="270"
+                    height="284">
+                </picture>
+                <h3>Necklace with amethyst </h3>
+                <p>$ 145</p>
+              </a>
+            </li>
+            <li class="slider-item swiper-slide">
+              <a class="slider-item__link" href="#">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="img/content/main/2-mobile-main.webp 1x, img/content/main/2-mobile-main@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/content/main/2-tablet-main.webp 1x, img/content/main/2-tablet-main@2x.webp 2x">
 
-                    <source type="image/webp"
-                      srcset="img/content/main/2-desktop-main.webp 1x, img/content/main/2-desktop-main@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/content/main/2-desktop-main.webp 1x, img/content/main/2-desktop-main@2x.webp 2x">
 
-                    <!-- 1х: 324px; 2x: 648px -->
-                    <source media="(max-width: 1023px)"
-                      srcset="img/content/main/2-tablet-main.jpg 1x, img/content/main/2-tablet-main@2x.jpg 2x">
-                    <!-- 1х: 130px; 2x:260px -->
-                    <source media="(max-width: 767px)"
-                      srcset="img/content/main/2-mobile-main.jpg 1x, img/content/main/2-mobile-main@2x.jpg 2x">
-                    <!-- 1х: 270px; 2x: 540px -->
-                    <img loading="lazy" src="img/content/main/2-desktop-main.jpg"
-                      srcset="img/content/main/2-desktop-main@2x.jpg 2x" alt="Layered сhoker" width="270"
-                      height="284">
-                  </picture>
-                  <h3>Layered сhoker</h3>
-                  <p>$ 115</p>
-                </a>
-              </li>
-              <li class="slider-item swiper-slide">
-                <a class="slider-item__link" href="#">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)"
-                      srcset="img/content/main/3-mobile-main.webp 1x, img/content/main/3-mobile-main@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1023px)"
-                      srcset="img/content/main/3-tablet-main.webp 1x, img/content/main/3-tablet-main@2x.webp 2x">
+                  <!-- 1х: 324px; 2x: 648px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/content/main/2-tablet-main.jpg 1x, img/content/main/2-tablet-main@2x.jpg 2x">
+                  <!-- 1х: 130px; 2x:260px -->
+                  <source media="(max-width: 767px)"
+                    srcset="img/content/main/2-mobile-main.jpg 1x, img/content/main/2-mobile-main@2x.jpg 2x">
+                  <!-- 1х: 270px; 2x: 540px -->
+                  <img loading="lazy" src="img/content/main/2-desktop-main.jpg"
+                    srcset="img/content/main/2-desktop-main@2x.jpg 2x" alt="Layered сhoker" width="270" height="284">
+                </picture>
+                <h3>Layered сhoker</h3>
+                <p>$ 115</p>
+              </a>
+            </li>
+            <li class="slider-item swiper-slide">
+              <a class="slider-item__link" href="#">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="img/content/main/3-mobile-main.webp 1x, img/content/main/3-mobile-main@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/content/main/3-tablet-main.webp 1x, img/content/main/3-tablet-main@2x.webp 2x">
 
-                    <source type="image/webp"
-                      srcset="img/content/main/3-desktop-main.webp 1x, img/content/main/3-desktop-main@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/content/main/3-desktop-main.webp 1x, img/content/main/3-desktop-main@2x.webp 2x">
 
-                    <!-- 1х: 324px; 2x: 648px -->
-                    <source media="(max-width: 1023px)"
-                      srcset="img/content/main/3-tablet-main.jpg 1x, img/content/main/3-tablet-main@2x.jpg 2x">
-                    <!-- 1х: 130px; 2x:260px -->
-                    <source media="(max-width: 767px)"
-                      srcset="img/content/main/3-mobile-main.jpg 1x, img/content/main/3-mobile-main@2x.jpg 2x">
-                    <!-- 1х: 270px; 2x: 540px -->
-                    <img loading="lazy" src="img/content/main/3-desktop-main.jpg"
-                      srcset="img/content/main/3-desktop-main@2x.jpg 2x" alt="Gold chain" width="270"
-                      height="284">
-                  </picture>
-                  <h3>Gold chain</h3>
-                  <p>$ 215</p>
-                </a>
-              </li>
-              <li class="slider-item swiper-slide">
-                <a class="slider-item__link" href="#">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)"
-                      srcset="img/content/main/4-mobile-main.webp 1x, img/content/main/4-mobile-main@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1023px)"
-                      srcset="img/content/main/4-tablet-main.webp 1x, img/content/main/4-tablet-main@2x.webp 2x">
+                  <!-- 1х: 324px; 2x: 648px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/content/main/3-tablet-main.jpg 1x, img/content/main/3-tablet-main@2x.jpg 2x">
+                  <!-- 1х: 130px; 2x:260px -->
+                  <source media="(max-width: 767px)"
+                    srcset="img/content/main/3-mobile-main.jpg 1x, img/content/main/3-mobile-main@2x.jpg 2x">
+                  <!-- 1х: 270px; 2x: 540px -->
+                  <img loading="lazy" src="img/content/main/3-desktop-main.jpg"
+                    srcset="img/content/main/3-desktop-main@2x.jpg 2x" alt="Gold chain" width="270" height="284">
+                </picture>
+                <h3>Gold chain</h3>
+                <p>$ 215</p>
+              </a>
+            </li>
+            <li class="slider-item swiper-slide">
+              <a class="slider-item__link" href="#">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="img/content/main/4-mobile-main.webp 1x, img/content/main/4-mobile-main@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/content/main/4-tablet-main.webp 1x, img/content/main/4-tablet-main@2x.webp 2x">
 
-                    <source type="image/webp"
-                      srcset="img/content/main/4-desktop-main.webp 1x, img/content/main/4-desktop-main@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/content/main/4-desktop-main.webp 1x, img/content/main/4-desktop-main@2x.webp 2x">
 
-                    <!-- 1х: 324px; 2x: 648px -->
-                    <source media="(max-width: 1023px)"
-                      srcset="img/content/main/4-tablet-main.jpg 1x, img/content/main/4-tablet-main@2x.jpg 2x">
-                    <!-- 1х: 130px; 2x:260px -->
-                    <source media="(max-width: 767px)"
-                      srcset="img/content/main/4-mobile-main.jpg 1x, img/content/main/4-mobile-main@2x.jpg 2x">
-                    <!-- 1х: 270px; 2x: 540px -->
-                    <img loading="lazy" src="img/content/main/4-desktop-main.jpg"
-                      srcset="img/content/main/4-desktop-main@2x.jpg 2x" alt="Galaxy earrings" width="270"
-                      height="284">
-                  </picture>
-                  <h3>Galaxy earrings</h3>
-                  <p>$ 95</p>
-                </a>
-              </li>
-              <li class="slider-item swiper-slide">
-                <a class="slider-item__link" href="#">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)"
-                      srcset="img/content/main/1-mobile-main.webp 1x, img/content/main/1-mobile-main@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1023px)"
-                      srcset="img/content/main/1-tablet-main.webp 1x, img/content/main/1-tablet-main@2x.webp 2x">
+                  <!-- 1х: 324px; 2x: 648px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/content/main/4-tablet-main.jpg 1x, img/content/main/4-tablet-main@2x.jpg 2x">
+                  <!-- 1х: 130px; 2x:260px -->
+                  <source media="(max-width: 767px)"
+                    srcset="img/content/main/4-mobile-main.jpg 1x, img/content/main/4-mobile-main@2x.jpg 2x">
+                  <!-- 1х: 270px; 2x: 540px -->
+                  <img loading="lazy" src="img/content/main/4-desktop-main.jpg"
+                    srcset="img/content/main/4-desktop-main@2x.jpg 2x" alt="Galaxy earrings" width="270" height="284">
+                </picture>
+                <h3>Galaxy earrings</h3>
+                <p>$ 95</p>
+              </a>
+            </li>
+            <li class="slider-item swiper-slide">
+              <a class="slider-item__link" href="#">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="img/content/main/1-mobile-main.webp 1x, img/content/main/1-mobile-main@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/content/main/1-tablet-main.webp 1x, img/content/main/1-tablet-main@2x.webp 2x">
 
-                    <source type="image/webp"
-                      srcset="img/content/main/1-desktop-main.webp 1x, img/content/main/1-desktop-main@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/content/main/1-desktop-main.webp 1x, img/content/main/1-desktop-main@2x.webp 2x">
 
-                    <!-- 1х: 324px; 2x: 648px -->
-                    <source media="(max-width: 1023px)"
-                      srcset="img/content/main/1-tablet-main.jpg 1x, img/content/main/1-tablet-main@2x.jpg 2x">
-                    <!-- 1х: 130px; 2x:260px -->
-                    <source media="(max-width: 767px)"
-                      srcset="img/content/main/1-mobile-main.jpg 1x, img/content/main/1-mobile-main@2x.jpg 2x">
-                    <!-- 1х: 270px; 2x: 540px -->
-                    <img loading="lazy" src="img/content/main/1-desktop-main.jpg"
-                      srcset="img/content/main/1-desktop-main@2x.jpg 2x" alt="Necklace with amethyst" width="270"
-                      height="284">
-                  </picture>
-                  <h3>Necklace with amethyst </h3>
-                  <p>$ 145</p>
-                </a>
-              </li>
-              <li class="slider-item swiper-slide">
-                <a class="slider-item__link" href="#">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)"
-                      srcset="img/content/main/2-mobile-main.webp 1x, img/content/main/2-mobile-main@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1023px)"
-                      srcset="img/content/main/2-tablet-main.webp 1x, img/content/main/2-tablet-main@2x.webp 2x">
+                  <!-- 1х: 324px; 2x: 648px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/content/main/1-tablet-main.jpg 1x, img/content/main/1-tablet-main@2x.jpg 2x">
+                  <!-- 1х: 130px; 2x:260px -->
+                  <source media="(max-width: 767px)"
+                    srcset="img/content/main/1-mobile-main.jpg 1x, img/content/main/1-mobile-main@2x.jpg 2x">
+                  <!-- 1х: 270px; 2x: 540px -->
+                  <img loading="lazy" src="img/content/main/1-desktop-main.jpg"
+                    srcset="img/content/main/1-desktop-main@2x.jpg 2x" alt="Necklace with amethyst" width="270"
+                    height="284">
+                </picture>
+                <h3>Necklace with amethyst </h3>
+                <p>$ 145</p>
+              </a>
+            </li>
+            <li class="slider-item swiper-slide">
+              <a class="slider-item__link" href="#">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="img/content/main/2-mobile-main.webp 1x, img/content/main/2-mobile-main@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/content/main/2-tablet-main.webp 1x, img/content/main/2-tablet-main@2x.webp 2x">
 
-                    <source type="image/webp"
-                      srcset="img/content/main/2-desktop-main.webp 1x, img/content/main/2-desktop-main@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/content/main/2-desktop-main.webp 1x, img/content/main/2-desktop-main@2x.webp 2x">
 
-                    <!-- 1х: 324px; 2x: 648px -->
-                    <source media="(max-width: 1023px)"
-                      srcset="img/content/main/2-tablet-main.jpg 1x, img/content/main/2-tablet-main@2x.jpg 2x">
-                    <!-- 1х: 130px; 2x:260px -->
-                    <source media="(max-width: 767px)"
-                      srcset="img/content/main/2-mobile-main.jpg 1x, img/content/main/2-mobile-main@2x.jpg 2x">
-                    <!-- 1х: 270px; 2x: 540px -->
-                    <img loading="lazy" src="img/content/main/2-desktop-main.jpg"
-                      srcset="img/content/main/2-desktop-main@2x.jpg 2x" alt="Layered сhoker" width="270"
-                      height="284">
-                  </picture>
-                  <h3>Layered сhoker</h3>
-                  <p>$ 115</p>
-                </a>
-              </li>
-              <li class="slider-item swiper-slide">
-                <a class="slider-item__link" href="#">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)"
-                      srcset="img/content/main/3-mobile-main.webp 1x, img/content/main/3-mobile-main@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1023px)"
-                      srcset="img/content/main/3-tablet-main.webp 1x, img/content/main/3-tablet-main@2x.webp 2x">
+                  <!-- 1х: 324px; 2x: 648px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/content/main/2-tablet-main.jpg 1x, img/content/main/2-tablet-main@2x.jpg 2x">
+                  <!-- 1х: 130px; 2x:260px -->
+                  <source media="(max-width: 767px)"
+                    srcset="img/content/main/2-mobile-main.jpg 1x, img/content/main/2-mobile-main@2x.jpg 2x">
+                  <!-- 1х: 270px; 2x: 540px -->
+                  <img loading="lazy" src="img/content/main/2-desktop-main.jpg"
+                    srcset="img/content/main/2-desktop-main@2x.jpg 2x" alt="Layered сhoker" width="270" height="284">
+                </picture>
+                <h3>Layered сhoker</h3>
+                <p>$ 115</p>
+              </a>
+            </li>
+            <li class="slider-item swiper-slide">
+              <a class="slider-item__link" href="#">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="img/content/main/3-mobile-main.webp 1x, img/content/main/3-mobile-main@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/content/main/3-tablet-main.webp 1x, img/content/main/3-tablet-main@2x.webp 2x">
 
-                    <source type="image/webp"
-                      srcset="img/content/main/3-desktop-main.webp 1x, img/content/main/3-desktop-main@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/content/main/3-desktop-main.webp 1x, img/content/main/3-desktop-main@2x.webp 2x">
 
-                    <!-- 1х: 324px; 2x: 648px -->
-                    <source media="(max-width: 1023px)"
-                      srcset="img/content/main/3-tablet-main.jpg 1x, img/content/main/3-tablet-main@2x.jpg 2x">
-                    <!-- 1х: 130px; 2x:260px -->
-                    <source media="(max-width: 767px)"
-                      srcset="img/content/main/3-mobile-main.jpg 1x, img/content/main/3-mobile-main@2x.jpg 2x">
-                    <!-- 1х: 270px; 2x: 540px -->
-                    <img loading="lazy" src="img/content/main/3-desktop-main.jpg"
-                      srcset="img/content/main/3-desktop-main@2x.jpg 2x" alt="Gold chain" width="270"
-                      height="284">
-                  </picture>
-                  <h3>Gold chain</h3>
-                  <p>$ 215</p>
-                </a>
-              </li>
-              <li class="slider-item swiper-slide">
-                <a class="slider-item__link" href="#">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)"
-                      srcset="img/content/main/4-mobile-main.webp 1x, img/content/main/4-mobile-main@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1023px)"
-                      srcset="img/content/main/4-tablet-main.webp 1x, img/content/main/4-tablet-main@2x.webp 2x">
+                  <!-- 1х: 324px; 2x: 648px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/content/main/3-tablet-main.jpg 1x, img/content/main/3-tablet-main@2x.jpg 2x">
+                  <!-- 1х: 130px; 2x:260px -->
+                  <source media="(max-width: 767px)"
+                    srcset="img/content/main/3-mobile-main.jpg 1x, img/content/main/3-mobile-main@2x.jpg 2x">
+                  <!-- 1х: 270px; 2x: 540px -->
+                  <img loading="lazy" src="img/content/main/3-desktop-main.jpg"
+                    srcset="img/content/main/3-desktop-main@2x.jpg 2x" alt="Gold chain" width="270" height="284">
+                </picture>
+                <h3>Gold chain</h3>
+                <p>$ 215</p>
+              </a>
+            </li>
+            <li class="slider-item swiper-slide">
+              <a class="slider-item__link" href="#">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="img/content/main/4-mobile-main.webp 1x, img/content/main/4-mobile-main@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/content/main/4-tablet-main.webp 1x, img/content/main/4-tablet-main@2x.webp 2x">
 
-                    <source type="image/webp"
-                      srcset="img/content/main/4-desktop-main.webp 1x, img/content/main/4-desktop-main@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/content/main/4-desktop-main.webp 1x, img/content/main/4-desktop-main@2x.webp 2x">
 
-                    <!-- 1х: 324px; 2x: 648px -->
-                    <source media="(max-width: 1023px)"
-                      srcset="img/content/main/4-tablet-main.jpg 1x, img/content/main/4-tablet-main@2x.jpg 2x">
-                    <!-- 1х: 130px; 2x:260px -->
-                    <source media="(max-width: 767px)"
-                      srcset="img/content/main/4-mobile-main.jpg 1x, img/content/main/4-mobile-main@2x.jpg 2x">
-                    <!-- 1х: 270px; 2x: 540px -->
-                    <img loading="lazy" src="img/content/main/4-desktop-main.jpg"
-                      srcset="img/content/main/4-desktop-main@2x.jpg 2x" alt="Galaxy earrings" width="270"
-                      height="284">
-                  </picture>
-                  <h3>Galaxy earrings</h3>
-                  <p>$ 95</p>
-                </a>
-              </li>
+                  <!-- 1х: 324px; 2x: 648px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/content/main/4-tablet-main.jpg 1x, img/content/main/4-tablet-main@2x.jpg 2x">
+                  <!-- 1х: 130px; 2x:260px -->
+                  <source media="(max-width: 767px)"
+                    srcset="img/content/main/4-mobile-main.jpg 1x, img/content/main/4-mobile-main@2x.jpg 2x">
+                  <!-- 1х: 270px; 2x: 540px -->
+                  <img loading="lazy" src="img/content/main/4-desktop-main.jpg"
+                    srcset="img/content/main/4-desktop-main@2x.jpg 2x" alt="Galaxy earrings" width="270" height="284">
+                </picture>
+                <h3>Galaxy earrings</h3>
+                <p>$ 95</p>
+              </a>
+            </li>
 
-            </ul>
-            <button class="slider-button swiper-button-prev" type="button" aria-label="Left"></button>
-            <button class="slider-button swiper-button-next" type="button" aria-label="Right"></button>
-<div class="swiper-pagination"></div>
+
+          </ul>
+          <button class="slider-button swiper-button-next" type="button" aria-label="Right"></button>
+          <button class="slider-button swiper-button-prev" type="button" aria-label="Left"></button>
+
+          <div class="swiper-pagination"></div>
         </section>
         <section class="blog" id="blog">
           <h2>Blog</h2>
           <a class="blog-link" href="#">Read all</a>
           <div class="blog-wrapper">
 
-              <article class="blog-article blog-article--reverse">
-                <div class="blog-article-text">
-                  <h3>How to care for
-                    your jewellery</h3>
-                  <time datetime="2019-09-30">September 30, 2019</time>
-                  <a href="#" class="blog-article-link">Read Article</a>
-                </div>
-                <div class="blog-article-picture">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)"
-                      srcset="img/content/main/5-mobile-main.webp 1x, img/content/main/5-mobile-main@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1023px)"
-                      srcset="img/content/main/5-tablet-main.webp 1x, img/content/main/5-tablet-main@2x.webp 2x">
+            <article class="blog-article blog-article--reverse">
+              <div class="blog-article-text">
+                <h3>How to care for
+                  your jewellery</h3>
+                <time datetime="2019-09-30">September 30, 2019</time>
+                <a href="#" class="blog-article-link">Read Article</a>
+              </div>
+              <div class="blog-article-picture">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="img/content/main/5-mobile-main.webp 1x, img/content/main/5-mobile-main@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/content/main/5-tablet-main.webp 1x, img/content/main/5-tablet-main@2x.webp 2x">
 
-                    <source type="image/webp"
-                      srcset="img/content/main/5-desktop-main.webp 1x, img/content/main/5-desktop-main@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/content/main/5-desktop-main.webp 1x, img/content/main/5-desktop-main@2x.webp 2x">
 
-                    <!-- 1х: 324px; 2x: 648px -->
-                    <source media="(max-width: 1023px)"
-                      srcset="img/content/main/5-tablet-main.jpg 1x, img/content/main/5-tablet-main@2x.jpg 2x">
-                    <!-- 1х: 130px; 2x:260px -->
-                    <source media="(max-width: 767px)"
-                      srcset="img/content/main/5-mobile-main.jpg 1x, img/content/main/5-mobile-main@2x.jpg 2x">
-                    <!-- 1х: 270px; 2x: 540px -->
-                    <img loading="lazy" src="img/content/main/5-desktop-main.jpg"
-                      srcset="img/content/main/5-desktop-main@2x.jpg 2x" alt="Jewellerry face shape" width="270"
-                      height="284">
-                  </picture>
-                </div>
-              </article>
-              <article class="blog-article">
-                <div class="blog-article-text">
-                  <h3>Power of
-                    crystals</h3>
-                  <time datetime="2019-09-23">September 23, 2019</time>
-                  <a href="#" class="blog-article-link">Read Article</a>
-                </div>
-                <div class="blog-article-picture">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)"
-                      srcset="img/content/main/6-mobile-main.webp 1x, img/content/main/6-mobile-main@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1023px)"
-                      srcset="img/content/main/6-tablet-main.webp 1x, img/content/main/6-tablet-main@2x.webp 2x">
+                  <!-- 1х: 324px; 2x: 648px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/content/main/5-tablet-main.jpg 1x, img/content/main/5-tablet-main@2x.jpg 2x">
+                  <!-- 1х: 130px; 2x:260px -->
+                  <source media="(max-width: 767px)"
+                    srcset="img/content/main/5-mobile-main.jpg 1x, img/content/main/5-mobile-main@2x.jpg 2x">
+                  <!-- 1х: 270px; 2x: 540px -->
+                  <img loading="lazy" src="img/content/main/5-desktop-main.jpg"
+                    srcset="img/content/main/5-desktop-main@2x.jpg 2x" alt="Jewellerry face shape" width="270"
+                    height="284">
+                </picture>
+              </div>
+            </article>
+            <article class="blog-article">
+              <div class="blog-article-text">
+                <h3>Power of
+                  crystals</h3>
+                <time datetime="2019-09-23">September 23, 2019</time>
+                <a href="#" class="blog-article-link">Read Article</a>
+              </div>
+              <div class="blog-article-picture">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="img/content/main/6-mobile-main.webp 1x, img/content/main/6-mobile-main@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/content/main/6-tablet-main.webp 1x, img/content/main/6-tablet-main@2x.webp 2x">
 
-                    <source type="image/webp"
-                      srcset="img/content/main/6-desktop-main.webp 1x, img/content/main/6-desktop-main@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/content/main/6-desktop-main.webp 1x, img/content/main/6-desktop-main@2x.webp 2x">
 
-                    <!-- 1х: 324px; 2x: 648px -->
-                    <source media="(max-width: 1023px)"
-                      srcset="img/content/main/6-tablet-main.jpg 1x, img/content/main/6-tablet-main@2x.jpg 2x">
-                    <!-- 1х: 130px; 2x:260px -->
-                    <source media="(max-width: 767px)"
-                      srcset="img/content/main/6-mobile-main.jpg 1x, img/content/main/6-mobile-main@2x.jpg 2x">
-                    <!-- 1х: 270px; 2x: 540px -->
-                    <img loading="lazy" src="img/content/main/6-desktop-main.jpg"
-                      srcset="img/content/main/6-desktop-main@2x.jpg 2x" alt="Earrings with stones" width="270"
-                      height="284">
-                  </picture>
-                </div>
-              </article>
+                  <!-- 1х: 324px; 2x: 648px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/content/main/6-tablet-main.jpg 1x, img/content/main/6-tablet-main@2x.jpg 2x">
+                  <!-- 1х: 130px; 2x:260px -->
+                  <source media="(max-width: 767px)"
+                    srcset="img/content/main/6-mobile-main.jpg 1x, img/content/main/6-mobile-main@2x.jpg 2x">
+                  <!-- 1х: 270px; 2x: 540px -->
+                  <img loading="lazy" src="img/content/main/6-desktop-main.jpg"
+                    srcset="img/content/main/6-desktop-main@2x.jpg 2x" alt="Earrings with stones" width="270"
+                    height="284">
+                </picture>
+              </div>
+            </article>
 
 
-              <article class="blog-article blog-article--big">
-                <div class="blog-article-text">
-                  <h3>AW 19 trends</h3>
-                  <time datetime="2019-09-16">September 16, 2019</time>
-                  <a href="#" class="blog-article-link">Read Article</a>
-                </div>
-                <div class="blog-article-picture">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)"
-                      srcset="img/content/main/7-mobile-main.webp 1x, img/content/main/7-mobile-main@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1023px)"
-                      srcset="img/content/main/7-tablet-main.webp 1x, img/content/main/7-tablet-main@2x.webp 2x">
+            <article class="blog-article blog-article--big">
+              <div class="blog-article-text">
+                <h3>AW 19 trends</h3>
+                <time datetime="2019-09-16">September 16, 2019</time>
+                <a href="#" class="blog-article-link">Read Article</a>
+              </div>
+              <div class="blog-article-picture">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="img/content/main/7-mobile-main.webp 1x, img/content/main/7-mobile-main@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/content/main/7-tablet-main.webp 1x, img/content/main/7-tablet-main@2x.webp 2x">
 
-                    <source type="image/webp"
-                      srcset="img/content/main/7-desktop-main.webp 1x, img/content/main/7-desktop-main@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/content/main/7-desktop-main.webp 1x, img/content/main/7-desktop-main@2x.webp 2x">
 
-                    <!-- 1х: 324px; 2x: 648px -->
-                    <source media="(max-width: 1023px)"
-                      srcset="img/content/main/7-tablet-main.jpg 1x, img/content/main/7-tablet-main@2x.jpg 2x">
-                    <!-- 1х: 130px; 2x:260px -->
-                    <source media="(max-width: 767px)"
-                      srcset="img/content/main/7-mobile-main.jpg 1x, img/content/main/7-mobile-main@2x.jpg 2x">
-                    <!-- 1х: 270px; 2x: 540px -->
-                    <img loading="lazy" src="img/content/main/7-desktop-main.jpg"
-                      srcset="img/content/main/7-desktop-main@2x.jpg 2x" alt="Jewellerry" width="570" height="630">
-                  </picture>
-                </div>
-              </article>
+                  <!-- 1х: 324px; 2x: 648px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/content/main/7-tablet-main.jpg 1x, img/content/main/7-tablet-main@2x.jpg 2x">
+                  <!-- 1х: 130px; 2x:260px -->
+                  <source media="(max-width: 767px)"
+                    srcset="img/content/main/7-mobile-main.jpg 1x, img/content/main/7-mobile-main@2x.jpg 2x">
+                  <!-- 1х: 270px; 2x: 540px -->
+                  <img loading="lazy" src="img/content/main/7-desktop-main.jpg"
+                    srcset="img/content/main/7-desktop-main@2x.jpg 2x" alt="Jewellerry" width="570" height="630">
+                </picture>
+              </div>
+            </article>
 
           </div>
         </section>
-        <section class="questions">
+        <!--Класс questions--nojs  -работа страницы без js-->
+        <!-- questions-item--active -активный слайдер -->
+        <section class="questions questions--nojs">
           <h2>Frequently asked questions</h2>
           <ul class="questions-list">
             <li class="questions-item questions-item--active">
-              <h3>What materials are <br/> the jewellery made of?</h3>
-              <p >Our jewellerry is made of solid gold, silver or leather. Also, some
+              <h3>What materials are <br /> the jewellery made of?</h3>
+              <p>Our jewellerry is made of solid gold, silver or leather. Also, some
                 jewellery contains precious and semiprecious stones and crystals.</p>
             </li>
             <li class="questions-item">
-              <h3 >Which countries <br/> do you deliver to?</h3>
-              <p >Our jewellerry is made of solid gold, silver or leather. Also, some
+              <h3>Which countries <br /> do you deliver to?</h3>
+              <p>Our jewellerry is made of solid gold, silver or leather. Also, some
                 jewellery contains precious and semiprecious stones and crystals.</p>
             </li>
             <li class="questions-item">
-              <h3 >What are the <br/> payment methods?</h3>
-              <p >Our jewellerry is made of solid gold, silver or leather. Also, some
+              <h3>What are the <br /> payment methods?</h3>
+              <p>Our jewellerry is made of solid gold, silver or leather. Also, some
                 jewellery contains precious and semiprecious stones and crystals.</p>
             </li>
             <li class="questions-item">
-              <h3 >Can I return the <br/>jewellery if it didn’t fit me?</h3>
-              <p >Our jewellerry is made of solid gold, silver or leather. Also, some
+              <h3>Can I return the <br />jewellery if it didn’t fit me?</h3>
+              <p>Our jewellerry is made of solid gold, silver or leather. Also, some
                 jewellery contains precious and semiprecious stones and crystals.</p>
             </li>
           </ul>
@@ -626,8 +624,7 @@
                     srcset="img/content/main/10-mobile-main.jpg 1x, img/content/main/10-mobile-main@2x.jpg 2x">
                   <!-- 1х: 270px; 2x: 540px -->
                   <img loading="lazy" src="img/content/main/10-desktop-main.jpg"
-                    srcset="img/content/main/10-desktop-main@2x.jpg 2x" alt="Earrings square" width="270"
-                    height="284">
+                    srcset="img/content/main/10-desktop-main@2x.jpg 2x" alt="Earrings square" width="270" height="284">
                 </picture>
               </a>
             </li>
@@ -673,7 +670,8 @@
                     srcset="img/content/main/12-mobile-main-short.jpg 1x, img/content/main/12-mobile-main-short@2x.jpg 2x">
                   <!-- 1х: 270px; 2x: 540px -->
                   <img loading="lazy" src="img/content/main/12-desktop-main-short.jpg"
-                    srcset="img/content/main/12-desktop-main-short@2x.jpg 2x" alt="Earrings square" width="270" height="284">
+                    srcset="img/content/main/12-desktop-main-short@2x.jpg 2x" alt="Earrings square" width="270"
+                    height="284">
                 </picture>
               </a>
             </li>
@@ -777,26 +775,26 @@
           </ul>
 
           <section class="footer-social">
-          <h2 class="visually-hidden">Chjewellery social-networks</h2>
-          <ul class="footer-social-list">
-            <li class="footer-social-item"><a href="#" class="footer-social-link" aria-label="Facebook link"><svg
-                  width="8" height="15">
-                  <use xlink:href="img/sprite/sprite.svg#facebook"></use>
-                </svg>Facebook</a></li>
-            <li class="footer-social-item"><a href="#" class="footer-social-link" aria-label="Instagram link"><svg
-                  width="15" height="15">
-                  <use xlink:href="img/sprite/sprite.svg#insta"></use>
-                </svg>Instagram</a></li>
-            <li class="footer-social-item"><a href="#" class="footer-social-link" aria-label="Pinterest link"><svg
-                  width="16" height="15">
-                  <use xlink:href="img/sprite/sprite.svg#pin"></use>
-                </svg>Pinterest</a></li>
-            <li class="footer-social-item"><a href="#" class="footer-social-link" aria-label="Twitter link"><svg
-                  width="15" height="13">
-                  <use xlink:href="img/sprite/sprite.svg#twitter"></use>
-                </svg>Twitter</a></li>
-          </ul>
-        </section>
+            <h2 class="visually-hidden">Chjewellery social-networks</h2>
+            <ul class="footer-social-list">
+              <li class="footer-social-item"><a href="#" class="footer-social-link" aria-label="Facebook link"><svg
+                    width="8" height="15">
+                    <use xlink:href="img/sprite/sprite.svg#facebook"></use>
+                  </svg>Facebook</a></li>
+              <li class="footer-social-item"><a href="#" class="footer-social-link" aria-label="Instagram link"><svg
+                    width="15" height="15">
+                    <use xlink:href="img/sprite/sprite.svg#insta"></use>
+                  </svg>Instagram</a></li>
+              <li class="footer-social-item"><a href="#" class="footer-social-link" aria-label="Pinterest link"><svg
+                    width="16" height="15">
+                    <use xlink:href="img/sprite/sprite.svg#pin"></use>
+                  </svg>Pinterest</a></li>
+              <li class="footer-social-item"><a href="#" class="footer-social-link" aria-label="Twitter link"><svg
+                    width="15" height="13">
+                    <use xlink:href="img/sprite/sprite.svg#twitter"></use>
+                  </svg>Twitter</a></li>
+            </ul>
+          </section>
         </section>
 
       </div>
@@ -809,29 +807,29 @@
         <button class="login-top-button" type="button" aria-label="close-page"></button>
       </div>
 
-        <form method="post" action="https://echo.htmlacademy.ru">
-          <h3>Log In</h3>
-          <ul class="login-form-list">
-            <li class="login-form-item">
-              <label class="visually-hidden" for="emain-login"></label>
-              <input type="email" name="emain-login" id="emain-login" placeholder="Your E-mail" required>
-            </li>
-            <li class="login-form-item">
-              <label class="visually-hidden" for="password"></label>
-              <input type="password" name="password" id="password" placeholder="Password" required>
-            </li>
-          </ul>
-          <a class="login-form-link" href="#">Forgot your password?</a>
-          <button class="login-form-button btn" type="submit">Log In</button>
-        </form>
-        <div class="login-text">
-          <p>Don’t have an account?</p>
-          <a class="login-text__link" href="#">Sign up</a>
-        </div>
+      <form method="post" action="https://echo.htmlacademy.ru">
+        <h3>Log In</h3>
+        <ul class="login-form-list">
+          <li class="login-form-item">
+            <label class="visually-hidden" for="emain-login"></label>
+            <input type="email" name="emain-login" id="emain-login" placeholder="Your E-mail" required>
+          </li>
+          <li class="login-form-item">
+            <label class="visually-hidden" for="password"></label>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+          </li>
+        </ul>
+        <a class="login-form-link" href="#">Forgot your password?</a>
+        <button class="login-form-button btn" type="submit">Log In</button>
+      </form>
+      <div class="login-text">
+        <p>Don’t have an account?</p>
+        <a class="login-text__link" href="#">Sign up</a>
+      </div>
     </section>
   </div>
-  <script src="js/vendor.js"></script>
-  <script src="js/main.js"></script>
+  <script type="module" src="js/vendor.js"></script>
+  <script type="module" src="js/main.js"></script>
 
 </body>
 

@@ -1,4 +1,4 @@
-.login-wrapper{
+.login-wrapper {
   display: none;
   overflow: scroll;
 
@@ -7,23 +7,20 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color:$white;
+  background-color: $white;
   z-index: 10;
 
-  &--page{
+  &--page {
     display: block;
     position: static;
-   background-color: transparent;
-
-   padding:0 calc(50% - 215px);
+    background-color: transparent;
+    padding: 0 calc(50% - 215px);
   }
-
 }
 
-.login-wrapper--overlay{
-  display:block;
+.login-wrapper--overlay {
+  display: block;
 }
-
 
 .login {
   position: absolute;
@@ -33,11 +30,10 @@
   box-sizing: border-box;
   background: $beige;
   z-index: 1000;
- width: 430px;
+  width: 430px;
 
-  &--page{
-
-    position:static;
+  &--page {
+    position: static;
     left: 0;
     top: 0;
     transform: translate(0);
@@ -47,134 +43,141 @@
 }
 
 .login-top {
-
- text-align: right;
+  text-align: right;
   min-height: 140px;
-  background: $brown url("../img/bg/login.jpg")no-repeat center;
+  background: $brown url("../img/bg/login.jpg") no-repeat center;
   background-size: cover;
- margin-bottom: 50px;
+  margin-bottom: 50px;
 
   @media (min-resolution: 2dppx) {
-    background:$brown url("../img/bg/login@2x.jpg") center no-repeat;
+    background: $brown url("../img/bg/login@2x.jpg") center no-repeat;
     background-size: cover;
   }
 }
+
 .login-top-button {
   @include reset-block;
   margin: 20px 18px 0 0;
   border: none;
-  width:20px;
+  width: 20px;
   height: 20px;
-  background: transparent url("../img/icons/cross.svg")no-repeat center;
-  &:hover{
-transform: scale(1.3);
-transition: 0.2s;
-  }
-  &:focus{
+  background: transparent url("../img/icons/cross.svg") no-repeat center;
+
+  &:hover {
     transform: scale(1.3);
     transition: 0.2s;
   }
-  &:active{
+
+  &:focus {
+    transform: scale(1.3);
+    transition: 0.2s;
+  }
+
+  &:active {
     transform: scale(0.9);
     transition: 0.2s;
-
   }
 }
 
 .login form {
-
   display: flex;
-width: 100%;
+  width: 100%;
   flex-direction: column;
-  padding:0 45px 40px 45px;
-text-align: center;
+  padding: 0 45px 40px 45px;
+  text-align: center;
 }
 
-
-.login h3{
+.login h3 {
   @include reset-block;
   margin-bottom: 20px;
   font-family: $garamond;
   font-size: 34px;
   font-weight: 700;
-  line-height:130% ;
+  line-height: 130%;
 }
+
 .login-form-list {
   @include reset;
   margin-bottom: 10px;
 }
 
-.login-form-item{
-  &:not(:last-child){
+.login-form-item {
+  &:not(:last-child) {
     margin-bottom: 25px;
   }
 }
+
 .login-form-item input {
-  width:100%;
+  width: 100%;
   background: transparent;
-  border:none;
-  border-bottom:1px solid $black;
-  padding:10px 0 9px 3px;
+  border: none;
+  border-bottom: 1px solid $black;
+  padding: 10px 0 9px 3px;
   font-family: inherit;
   font-size: 14px;
   line-height: 21px;
   font-weight: 500;
-  outline:none;
+  outline: none;
 
-  &::placeholder{
+  &::placeholder {
     font-size: inherit;
     font-family: inherit;
-
   }
 
-  &:hover{
-
-  border-bottom:1px solid $brown;
+  &:hover {
+    border-bottom: 1px solid $brown;
   }
-  &:focus{
+
+  &:focus {
     background-color: transparent;
-    border-bottom:1px solid $brown;
-    outline:none;
+    border-bottom: 1px solid $brown;
+    outline: none;
   }
-
 }
+
 .login-form-link {
-  color:$grey;
+  color: $grey;
   font-size: 12px;
   line-height: 150%;
   margin-bottom: 42px;
   margin-top: -3px;
   align-self: flex-end;
-  &:hover{
-    color:$brown;
-    }
-    &:focus{
-      color:$brown;
-      }
-      &:active{
-     transform: scale(0.9);
-     transition: 0.2s;
-        }
+
+  &:hover {
+    color: $brown;
+  }
+
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
 }
 
 .login-form-button {
-  padding:24px 0;
+  padding: 24px 0;
   font-size: inherit;
   line-height: 20.8px;
-  &:hover{
 
-  transform: scale(1.05);
+  &:hover {
+    transform: scale(1.05);
     transition: 0.2s;
-    }
-    &:focus{
-      transform: scale(1.05);
-      transition: 0.2s;
-      }
-      &:active{
-     transform: scale(0.9);
-     transition: 0.2s;
-        }
+  }
+
+  &:focus {
+    transform: scale(1.05);
+    transition: 0.2s;
+  }
+
+  &:active {
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
 }
+
 .login-text {
   display: flex;
   flex-direction: row;
@@ -183,65 +186,77 @@ text-align: center;
   justify-content: center;
 }
 
-.login-text p{
-  color:$grey;
+.login-text p {
+  color: $grey;
   font-size: 14px;
   line-height: 150%;
   margin-right: 5px;
   margin-left: -4px;
-
 }
-.login-text__link{
-  color:$black;
+
+.login-text__link {
+  color: $black;
   font-size: 14px;
   line-height: 150%;
 
-
-  &:hover{
-  color:$brown;
+  &:hover {
+    color: $brown;
   }
-  &:focus{
-    color:$brown;
-    }
-    &:active{
-   transform: scale(0.9);
-   transition: 0.2s;
-      }
+
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
 }
 
 @media (max-width: $mobile-width) {
-  .login{
-    width:270px;
+  .login-wrapper {
+    &--page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .login {
+    width: 270px;
     padding-bottom: 21px;
   }
-  .login-top{
-min-height: 84px;
-margin-bottom: 37px;
+
+  .login-top {
+    min-height: 84px;
+    margin-bottom: 37px;
   }
 
-  .login-top-button{
+  .login-top-button {
     margin: 11px 11px 0 0;
   }
-  .login h3{
-      font-size: 24px;
-      margin-bottom: 15px;
 
-  }
-  .login form{
-    padding:0 15px 0px 13px;
+  .login h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
   }
 
-  .login-form-item{
-    &:not(:last-child){
+  .login form {
+    padding: 0 15px 0 13px;
+  }
+
+  .login-form-item {
+    &:not(:last-child) {
       margin-bottom: 19px;
     }
   }
-  .login-form-link{
+
+  .login-form-link {
     margin-top: -5px;
     margin-bottom: 35px;
   }
 
-  .login-form-button{
-    margin-bottom: 0px;
+  .login-form-button {
+    margin-bottom: 0;
   }
 }

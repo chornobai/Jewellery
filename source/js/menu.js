@@ -4,10 +4,10 @@ const menuLinks = document.querySelectorAll('.navigation-link');
 
 menu.classList.remove('header-nojs');
 
-menuButton.addEventListener('click', function(evt){
+menuButton.addEventListener('click', (evt)=> {
   evt.preventDefault;
   menu.classList.toggle('header-open-menu');
-})
+});
 
 menuLinks.forEach((item) => {
   item.addEventListener('click', (evt) => {

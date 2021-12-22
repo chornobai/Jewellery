@@ -1,6 +1,7 @@
 .navigation {
   padding: 20px calc(50% - 250px) 19px calc(50% - 239px);
 }
+
 .navigation-list {
   @include reset;
   display: flex;
@@ -23,40 +24,42 @@
   border-bottom: 1px solid transparent;
 
   &:hover {
-    color:$brown;
+    color: $brown;
     border-bottom: 1px solid $brown;
-
   }
+
   &:focus {
-    color:$brown;
+    color: $brown;
     border-bottom: 1px solid $brown;
-
   }
+
   &:active {
     transform: scale(0.9);
     transition: 0.2s;
   }
 }
+
 .navigation-list--info {
   display: none;
 }
 
 @media (max-width: $tablet-width) {
   .navigation {
-    padding: 0px calc(50% - 339px);
+    padding: 0 calc(50% - 339px);
   }
-  .navigation-item {
 
+  .navigation-item {
     &:not(:last-child) {
       margin-bottom: 20px;
     }
   }
+
   .navigation-list {
     display: none;
     flex-direction: column;
 
     &:not(:last-child) {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
 
     &--info {
@@ -75,31 +78,32 @@
         }
       }
     }
-
-
   }
 
   .navigation-link {
     font-size: 24px;
     line-height: 154%;
     color: $white;
-    &:hover{
-color:$white;
-border-bottom: 1px solid $white;
 
+    &:hover {
+      color: $white;
+      border-bottom: 1px solid $white;
     }
-    &:focus{
-      color:$white;
+
+    &:focus {
+      color: $white;
     }
-    &:active{
-      color:$white;
+
+    &:active {
+      color: $white;
     }
   }
 
   .header-open-menu .navigation-list,
   .header-nojs .navigation-list {
     display: block;
-padding: 46px 0 0 0;
+    padding: 46px 0 0 0;
+
     &--info {
       display: block;
       padding: 36px 0 0 0;
@@ -109,30 +113,27 @@ padding: 46px 0 0 0;
 
 @media (max-width: $mobile-width) {
   .navigation {
-    padding: 0px 15px;
+    padding: 0 15px;
   }
 
-
   .navigation-list {
-
     &--info {
-      .navigation-item{
+      .navigation-item {
         .navigation-link {
           &--login {
             color: $white;
             margin-top: 18px;
           }
         }
-
+      }
     }
-  }
-
   }
 
   .header-open-menu .navigation-list,
   .header-nojs .navigation-list {
     display: block;
     padding: 36px 0 0 0;
+
     &--info {
       display: block;
       padding: 27px 0 0 0;

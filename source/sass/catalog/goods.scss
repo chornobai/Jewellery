@@ -1,95 +1,99 @@
 .goods {
-margin-bottom: 77px;
+  margin-bottom: 77px;
 }
 
 .goods-list {
   @include reset;
   display: grid;
-  grid-template-columns:1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 30px;
   grid-row-gap: 35px;
   margin-bottom: 68px;
 }
 
-.goods-filter-button{
-width: 100%;
+.goods-filter-button {
+  width: 100%;
 }
 
-.goods-link{
+.goods-link {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  &:hover{
-    transform: scale(1.1);
-    transition: 0.2s;
-  }
-  &:focus{
+
+  &:hover {
     transform: scale(1.1);
     transition: 0.2s;
   }
 
-  &:active{
+  &:focus {
+    transform: scale(1.1);
+    transition: 0.2s;
+  }
+
+  &:active {
     transform: scale(0.9);
     transition: 0.2s;
   }
 }
 
-.goods-link img{
+.goods-link img {
   margin-bottom: 21px;
   object-fit: cover;
 }
 
-.goods-link h3{
+.goods-link h3 {
   @include reset;
-color:$black;
-font-size: inherit;
-line-height: inherit;
-font-weight: inherit;
-margin-bottom: 7px;
-
+  color: $black;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  margin-bottom: 7px;
 }
 
-.goods-link p{
+.goods-link p {
   @include reset;
-color:$black;
-font-size: 14px;
-line-height: 18px;
-font-weight: 700;
+  color: $black;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
 }
-
 
 @media (max-width: $tablet-width) {
-  .goods{
+  .goods {
     margin-bottom: 2px;
   }
-  .goods-list{
-      grid-template-columns:1fr 1fr 1fr;
-      grid-column-gap: 30px;
-      grid-row-gap: 35px;
-      margin-bottom: 36px;
 
- }
- .goods-link{
-   max-width: 206px;
- }
-}
-  @media (max-width: $mobile-width) {
-    .goods-list{
-      grid-template-columns:1fr 1fr;
-      grid-column-gap: 30px;
-      grid-row-gap: 25px;
-      justify-items: center;
-margin-bottom: 33px;
- }
-    .goods-link{
-      min-width: 130px;
-    }
-
-    .goods-link img{
-      margin-bottom: 16px;
-    }
-    .goods-link h3{
-      text-align: center;
-    }
+  .goods-list {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 35px;
+    margin-bottom: 36px;
   }
+
+  .goods-link {
+    max-width: 206px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .goods-list {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 25px;
+    justify-items: center;
+    margin-bottom: 33px;
+  }
+
+  .goods-link {
+    min-width: 130px;
+  }
+
+  .goods-link img {
+    margin-bottom: 16px;
+  }
+
+  .goods-link h3 {
+    text-align: center;
+  }
+}

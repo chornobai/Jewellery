@@ -12,22 +12,27 @@
   line-height: 44px;
   margin-bottom: 19px;
 }
+
 .blog-link {
   color: $black;
   text-transform: capitalize;
   border-bottom: 1px solid $brown;
   margin-bottom: 64px;
+
   &:hover {
     color: $brown;
   }
+
   &:focus {
     color: $brown;
   }
+
   &:active {
     color: $brown;
     transform: scale(0.9);
   }
 }
+
 .blog-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -35,6 +40,7 @@
   grid-column-gap: 30px;
   grid-row-gap: 30px;
 }
+
 .blog-article-text {
   max-width: 285px;
   display: flex;
@@ -79,20 +85,23 @@
   height: 100%;
   object-fit: cover;
 }
+
 .blog-article {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-columns: auto;
+
   &--reverse {
     .blog-article-text {
       grid-column: 2/-1;
       grid-row: 1/-1;
     }
+
     .blog-article-picture {
       grid-column: 1/2;
       grid-row: 1/-1;
     }
   }
+
   &--big {
     grid-column: 2/-1;
     grid-row: 1/-1;
@@ -124,9 +133,11 @@
   &:hover {
     color: $brown;
   }
+
   &:focus {
     color: $brown;
   }
+
   &:active {
     color: $brown;
     transform: scale(0.9);
@@ -134,12 +145,14 @@
 }
 
 @media (max-width: $tablet-width) {
-  .blog{
+  .blog {
     margin-bottom: 70px;
   }
+
   .blog-link {
     margin-bottom: 63px;
   }
+
   .blog-wrapper {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -147,29 +160,31 @@
     grid-row-gap: 50px;
   }
 
-.blog-article-picture{
-max-width: 339px;
-}
-.blog-article-text{
-  max-width: 339px;
-  padding: 66px 86px;
-}
+  .blog-article-picture {
+    max-width: 339px;
+  }
+
+  .blog-article-text {
+    max-width: 339px;
+    padding: 66px 86px;
+  }
+
   .blog-article {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+
     &--reverse {
       .blog-article-text {
         grid-column: 2/-1;
-
-
       }
+
       .blog-article-picture {
         grid-column: 1/2;
         grid-row: 1/-1;
-
       }
     }
+
     &--big {
       grid-column: span 1;
       grid-row: auto;
@@ -177,32 +192,28 @@ max-width: 339px;
 
       .blog-article-picture {
         grid-column: 1/2;
-        grid-row:1/-1;
+        grid-row: 1/-1;
         max-width: 339px;
-
       }
 
       .blog-article-text {
         position: static;
         bottom: 0;
-        right:0;
+        right: 0;
         grid-column: 2/-1;
-        grid-row:1/-1;
+        grid-row: 1/-1;
         max-width: 100%;
-        padding:83px 101px
-
-
+        padding: 83px 101px;
       }
     }
   }
-
-
-
 }
+
 @media (max-width: $mobile-width) {
-  .blog{
+  .blog {
     margin-bottom: 61px;
   }
+
   .blog-wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -210,53 +221,52 @@ max-width: 339px;
     grid-column-gap: 0;
     grid-row-gap: 39px;
   }
-  .blog-link{
+
+  .blog-link {
     margin-bottom: 53px;
   }
 
   .blog-article {
     grid-template-rows: auto auto;
 
-    &--reverse{
-      .blog-article-picture{
+    &--reverse {
+      .blog-article-picture {
         grid-column: 1/-1;
         grid-row: 1/2;
       }
-      .blog-article-text{
+
+      .blog-article-text {
         grid-column: 1/-1;
         grid-row: 2/-1;
       }
     }
 
-    &--big{
+    &--big {
+      .blog-article-picture {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+      }
 
-        .blog-article-picture{
-          grid-column: 1/-1;
-          grid-row: 1/2;
-        }
-        .blog-article-text{
-          grid-column: 1/-1;
-          grid-row: 2/-1;
-          min-width:290px;
-          padding: 0;
-          min-height: 256px;
-          padding: 62px 60px;
-        }
-
+      .blog-article-text {
+        grid-column: 1/-1;
+        grid-row: 2/-1;
+        min-width: 290px;
+        min-height: 256px;
+        padding: 62px 60px;
+      }
     }
   }
 
-
-.blog-article-picture{
-  max-width: 290px;
-  grid-column: 1/-1;
-  grid-row: 1/2;
+  .blog-article-picture {
+    max-width: 290px;
+    grid-column: 1/-1;
+    grid-row: 1/2;
   }
 
-  .blog-article-text{
+  .blog-article-text {
     max-width: 290px;
     padding: 45px 61px 52px 61px;
     grid-column: 1/-1;
-  grid-row: 2/-1;
+    grid-row: 2/-1;
   }
 }

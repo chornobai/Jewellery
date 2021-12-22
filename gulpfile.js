@@ -134,6 +134,8 @@ const scripts = () => {
       console.error('WEBPACK ERROR', err);
       this.emit('end'); // Don't stop the rest of the task
     })
+    .pipe(sourcemap.init())
+    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 

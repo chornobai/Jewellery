@@ -4,12 +4,14 @@
   &--page {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 100%;
     padding: 0 calc(50% - 234px);
-    form {
-      width: 100%;
+    margin: 0;
+
+    .filter-fieldset h3 {
+      &::after {
+        display: none;
+      }
     }
   }
 }
@@ -18,6 +20,10 @@
   display: flex;
   flex-direction: column;
   width: 254px;
+}
+
+.filter--page form {
+  width: 100%;
 }
 
 .filter-fieldset-content {
@@ -139,10 +145,7 @@
   position: relative;
   height: 35px;
   border-radius: 20px;
-  padding-left: 21px;
-  padding-right: 21px;
-  padding-top: 24px;
-  padding: 27px 0px 25px 21px;
+  padding: 27px 0 25px 21px;
   box-sizing: border-box;
 }
 
@@ -152,6 +155,7 @@
   background: $grey-light;
   z-index: 10;
 }
+
 .filter-fieldset__bar {
   width: 106px;
   height: 2px;
@@ -259,6 +263,17 @@
   line-height: inherit;
 }
 
+// filter--nojs  - неактивный фильтр
+.filter--nojs .filter-fieldset-content {
+  display: block;
+}
+
+.filter--nojs .filter-fieldset h3 {
+  &::after {
+    display: none;
+  }
+}
+
 @media (max-width: $tablet-width) {
   .filter-wrapper {
     display: none;
@@ -287,8 +302,18 @@
     margin-right: 0;
 
     &--page {
-      .filter form {
+      form {
         display: flex;
+        border: 1px solid $brown;
+        padding: 0 0 20px 0;
+      }
+
+      .filter-close {
+        display: none;
+      }
+
+      .filter-form__button {
+        margin: 0 20px;
       }
     }
 
@@ -312,74 +337,89 @@
   .filter-fieldset {
     border: none;
     border-bottom: 1px solid $brown;
-    padding: 35px 0px 35px 15px;
+    padding: 35px 0 35px 15px;
+
     &:first-of-type {
-      padding: 42px 0px 37px 15px;
+      padding: 42px 0 37px 15px;
     }
   }
 
   .filter-fieldset__item input + label::before {
-    top: 0px;
+    top: 0;
     left: 10px;
     width: 16px;
     height: 16px;
   }
 
   .filter-fieldset__item input:checked + label::after {
-    top: 0px;
+    top: 0;
     left: 10px;
     width: 16px;
     height: 16px;
   }
+
   .filter-fieldset__item label {
     font-size: 16px;
     padding-left: 39px;
   }
+
   .filter-fieldset__list {
     padding: 27px 0 0 0;
   }
+
   .filter-fieldset__item {
     &:not(:last-child) {
       margin-bottom: 20px;
     }
   }
+
   .filter-close {
     display: block;
     position: absolute;
     top: -10px;
     right: -20px;
   }
+
   .filter-fieldset h3 {
     font-size: 18px;
+
     &::after {
       width: 23px;
       height: 12px;
       right: 39px;
     }
   }
+
   .filter-fieldset__controls {
     padding: 35px 16px 35px 13px;
   }
+
   .filter-fieldset__scale {
     width: 304px;
   }
+
   .filter-fieldset__bar {
     width: 171px;
     margin-left: 50px;
   }
+
   .filter-fieldset__toggle {
     width: 20px;
     height: 20px;
     top: 26px;
   }
+
   .filter-fieldset__toggle--max {
     left: 229px;
   }
+
   .filter-fieldset__toggle--min {
     left: 53px;
   }
+
   .filter-form__button {
     margin: 0 42px 0 16px;
+
     &:not(:last-child) {
       margin-bottom: 26px;
     }
@@ -390,7 +430,7 @@
   .filter-wrapper {
     left: 0;
     top: 0;
-padding:76px 25px 50px 25px;
+    padding: 76px 25px 50px 25px;
     box-shadow: none;
     width: 100%;
     height: 100vh;
@@ -403,6 +443,7 @@ padding:76px 25px 50px 25px;
     box-shadow: 1px -1px 10px rgba(0, 0, 0, 0.2);
     padding-bottom: 30px;
   }
+
   .filter-close {
     right: 3.2%;
     top: 7.5%;
@@ -411,15 +452,19 @@ padding:76px 25px 50px 25px;
   .filter-open {
     margin-bottom: 39px;
   }
+
   .filter-fieldset {
     &:first-of-type {
       padding: 24px 0 28px 15px;
     }
+
     &:last-of-type {
       margin-bottom: 30px;
     }
+
     padding: 25px 0 26px 15px;
   }
+
   .filter-fieldset h3 {
     &::after {
       right: 20px;
@@ -429,25 +474,32 @@ padding:76px 25px 50px 25px;
   .filter-fieldset__controls {
     padding: 32px 16px 35px 13px;
   }
+
   .filter-fieldset__scale {
     width: 230px;
   }
+
   .filter-fieldset__bar {
     width: 120px;
     margin-left: 35px;
   }
+
   .filter-fieldset__toggle {
     width: 18px;
     height: 18px;
   }
+
   .filter-fieldset__toggle--max {
     left: 167px;
   }
+
   .filter-fieldset__toggle--min {
     left: 29px;
   }
+
   .filter-form__button {
     margin-right: 21px;
+
     &:not(:last-child) {
       margin-bottom: 20px;
     }

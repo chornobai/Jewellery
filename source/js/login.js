@@ -1,4 +1,4 @@
-const LOGIN_OVERLAY = 'login-wrapper--overlay'
+const LOGIN_OVERLAY = 'login-wrapper--overlay';
 
 const loginLinks = document.querySelectorAll('.login-link');
 const loginBlock = document.querySelector('.login-wrapper');
@@ -20,16 +20,16 @@ try {
 // Открытие модального окна и фокус в поле Email ---
 
 loginLinks.forEach((link) => {
-  link.addEventListener('click', function(evt){
+  link.addEventListener('click', (evt)=> {
     evt.preventDefault();
     loginBlock.classList.add(LOGIN_OVERLAY);
     loginMail.focus();
     if (storage) {
       loginMail.focus();
     }
-  })
+  });
 
-})
+});
 
 
 // Запись в LocalStorage ---
@@ -48,10 +48,10 @@ loginForm.addEventListener('submit', (evt) => {
 
 // Кнопка
 
-loginClose.addEventListener('click', function(evt){
+loginClose.addEventListener('click', (evt)=> {
   evt.preventDefault();
-loginBlock.classList.remove(LOGIN_OVERLAY);
-})
+  loginBlock.classList.remove(LOGIN_OVERLAY);
+});
 
 // Esc
 document.addEventListener('keydown', (evt) => {
