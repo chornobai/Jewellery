@@ -2,24 +2,18 @@
 import Swiper from './vendor/swiper-bundle.js';
 
 function initSwiper() {
-  const slider = new Swiper('.slider', {
+  const slider = new Swiper('.slider-row', {
     direction: 'horizontal',
+    spaceBetween: 15,
 
-    initialSlide: 0,
-    slidesPerView: 4,
-    slidesPerGroup: 4,
-
-
-    loop: true,
-
+    keyboardControl: true,
+    updateOnWindowResize: true,
     touchRatio: 0,
     simulateTouch: false,
 
     observer: true,
     observeParents: true,
     observeSliderChildren: true,
-
-    watchOverflow: true,
     keyboard: {
       enabled: true,
     },
@@ -45,7 +39,7 @@ function initSwiper() {
         },
         touchRatio: 1,
         simulateTouch: true,
-        spaceBetween: 30,
+
       },
 
       768: {
@@ -53,7 +47,16 @@ function initSwiper() {
         slidesPerGroup: 2,
         touchRatio: 1,
         simulateTouch: true,
-        spaceBetween: 30,
+        spaceBetween: 20,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          type: 'bullets',
+
+          renderBullet: function (index, className) {
+            return `<span class="${className}">${index + 1}</span>`;
+          },
+        },
       },
 
       1024: {
@@ -74,8 +77,32 @@ function initSwiper() {
         watchOverflow: true,
       },
     },
+
+    a11y: {
+      enabled: true,
+      prevSlideMessage: 'Previous slide',
+      nextSlideMessage: 'Next slide',
+    },
+
+  });
+
+  const buttons = document.querySelectorAll('.slider-button');
+  buttons.forEach((item) => {
+    item.setAttribute('tabindex', '0');
+    item.removeAttribute('aria-disabled');
+    item.removeAttribute('disabled');
+    item.classList.remove('swiper-button-disabled');
+
+    item.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      item.setAttribute('tabindex', '0');
+      item.removeAttribute('aria-disabled');
+      item.removeAttribute('disabled');
+      item.classList.remove('swiper-button-disabled');
+    });
   });
   return slider;
 }
+
 
 export { initSwiper };

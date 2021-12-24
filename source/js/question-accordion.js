@@ -1,6 +1,6 @@
 function initMainAccordion() {
   const questionBlock = document.querySelector('.questions');
-  const questionTriggers = questionBlock.querySelectorAll('h3');
+  const questionTriggers = questionBlock.querySelectorAll('.questions-item');
 
   questionBlock.classList.remove('questions--nojs');
 
@@ -9,8 +9,8 @@ function initMainAccordion() {
   questionTriggers.forEach((item) => {
     item.addEventListener('click', (evt) => {
       evt.preventDefault();
-      const block = item.closest('li');
-      block.classList.toggle('questions-item--active');
+      item.classList.toggle('questions-item--active');
+      item.blur();
 
     });
   });

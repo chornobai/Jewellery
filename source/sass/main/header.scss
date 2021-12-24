@@ -6,6 +6,7 @@
     align-items: center;
     padding: 20px 0 0 0;
     margin-bottom: 20px;
+    position: relative;
 
     .header-logo {
       position: static;
@@ -34,12 +35,12 @@
 
 .header-top {
   display: flex;
-  position: relative;
+
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  padding: 38px calc(50% - 605px) 48px;
+  align-items: flex-start;
+  padding: 40px calc(50% - 605px) 49px;
 
   border-bottom: 1px solid $grey-light;
   margin: 0 20px;
@@ -96,7 +97,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 5px 0 0 0;
+  padding: 0 0 0 0;
   background: transparent;
   border: none;
 
@@ -129,8 +130,8 @@
 .header-top__logo {
   position: absolute;
   left: 50%;
-  top: 58%;
-  transform: translate(-50%, -50%);
+  top: 29px;
+  transform: translateX(-51%);
 
   svg {
     color: $brown;
@@ -191,7 +192,7 @@
     grid-template-rows: auto auto;
     grid-row-gap: 61px;
 
-    padding: 53px calc(50% - 354px) 0 calc(50% - 353px);
+    padding: 53px 29px 0 29px;
     margin: 0 15px;
 
     border: none;

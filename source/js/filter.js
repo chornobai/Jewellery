@@ -3,7 +3,7 @@ function initFilter() {
   const filterOpen = document.querySelector('.filter-open');
   const filterClose = document.querySelector('.filter-close');
   const filterBlock = document.querySelector('.filter');
-  const filterTriggers = filterBlock.querySelectorAll('h3');
+  const filterTriggers = filterBlock.querySelectorAll('.filter-fieldset');
 
   filterBlock.classList.remove('filter--nojs');
   // --- Открыть фильтр
@@ -25,8 +25,8 @@ function initFilter() {
   filterTriggers.forEach((item) => {
     item.addEventListener('click', (evt) => {
       evt.preventDefault();
-      const block = item.closest('fieldset');
-      block.classList.toggle('filter-fieldset--active');
+      item.classList.toggle('filter-fieldset--active');
+      item.blur();
     });
   });
 

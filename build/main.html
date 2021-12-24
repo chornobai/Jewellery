@@ -8,6 +8,8 @@
   <meta name="description"
     content="Producing jewellery of solid gold, silver or leather. Jewellery contains precious and semiprecious stones and crystals.">
   <link rel="stylesheet" href="css/style.min.css">
+
+
   <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -19,7 +21,30 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/32.svg" type="image/svg+xml">
   <title>CHjewellery</title>
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-image: url('img/Main\ page.jpg');
+    }
 
+    @media (max-width: 1023px) {
+      HTML {
+        background-image: url('img/768\ Main\ page.jpg');
+      }
+    }
+
+    @media (max-width: 767px) {
+      HTML {
+        background-image: url('img/320\ Main.png');
+      }
+    }
+
+    /* Делаем слой с разметкой полупрозрачным */
+    BODY {
+      opacity: .5;
+    }
+  </style>
 </head>
 
 <body>
@@ -40,11 +65,12 @@
           <label class="visually-hidden" for="search"></label>
           <input type="text" id="search" name="search" placeholder="Type here to search">
         </form>
-        <a class="header-top__logo"><svg width="66" height="66">
+        <a class="header-top__logo" tabindex="0"><svg width="66" height="66">
             <use xlink:href="img/sprite/sprite.svg#logo"></use>
           </svg></a>
         <div class="header-top__right">
           <a class="header-top__link header-top__link--login login-link" href="login.html">Login</a>
+
           <a class="header-top__link header-top__link--cart" href="#" aria-label="Корзина">
             <p>Cart <span class="cart-count">0</span></p>
             <svg class="header-top__cart-icon" width="20" height="18">
@@ -76,7 +102,7 @@
       </div>
 
     </header>
-    <main class="main">
+    <main class="main" >
       <h1 class="visually-hidden">СHjewellery - website for jewellerry of gold and silver</h1>
       <section class="intro">
 
@@ -85,10 +111,15 @@
 
       </section>
       <div class="container">
-        <section class="slider swiper" id="slider">
+        <section class="slider">
+
           <h2>New in</h2>
           <a class="slider-link" href="catalog.html">Shop now</a>
+          <button class="slider-button swiper-button-prev" type="button" aria-label="Left"></button>
+          <button class="slider-button swiper-button-next" type="button" aria-label="Right"></button>
 
+
+<div class="slider-row swiper" id="slider">
           <ul class="slider-list swiper-wrapper">
             <li class="slider-item swiper-slide">
               <a class="slider-item__link" href="#">
@@ -394,13 +425,13 @@
               </a>
             </li>
 
-
           </ul>
-          <button class="slider-button swiper-button-next" type="button" aria-label="Right"></button>
-          <button class="slider-button swiper-button-prev" type="button" aria-label="Left"></button>
+<div class="swiper-pagination"></div>
 
-          <div class="swiper-pagination"></div>
-        </section>
+        </div>
+
+
+      </section>
         <section class="blog" id="blog">
           <h2>Blog</h2>
           <a class="blog-link" href="#">Read all</a>
@@ -504,22 +535,22 @@
         <section class="questions questions--nojs">
           <h2>Frequently asked questions</h2>
           <ul class="questions-list">
-            <li class="questions-item questions-item--active">
+            <li class="questions-item questions-item--active" tabindex="0">
               <h3>What materials are <br /> the jewellery made of?</h3>
-              <p>Our jewellerry is made of solid gold, silver or leather. Also, some
+              <p >Our jewellerry is made of solid gold, silver or leather. Also, some
                 jewellery contains precious and semiprecious stones and crystals.</p>
             </li>
-            <li class="questions-item">
+            <li class="questions-item" tabindex="0">
               <h3>Which countries <br /> do you deliver to?</h3>
-              <p>Our jewellerry is made of solid gold, silver or leather. Also, some
+              <p> Our jewellerry is made of solid gold, silver or leather. Also, some
                 jewellery contains precious and semiprecious stones and crystals.</p>
             </li>
-            <li class="questions-item">
+            <li class="questions-item" tabindex="0">
               <h3>What are the <br /> payment methods?</h3>
               <p>Our jewellerry is made of solid gold, silver or leather. Also, some
                 jewellery contains precious and semiprecious stones and crystals.</p>
             </li>
-            <li class="questions-item">
+            <li class="questions-item" tabindex="0">
               <h3>Can I return the <br />jewellery if it didn’t fit me?</h3>
               <p>Our jewellerry is made of solid gold, silver or leather. Also, some
                 jewellery contains precious and semiprecious stones and crystals.</p>
@@ -705,9 +736,9 @@
           <h2>The good stuff in your inbox </h2>
           <p>News and updates from CH. No spam, we promise.</p>
           <form method="post" action="https://echo.htmlacademy.ru">
-            <label for="footer-email"><input type="email" id="footer-email" name="footer-email"
-                placeholder="Your E-mail"></label>
-            <button class="footer-form__button" type="submit" aria-label="Подписаться">Sing Up<svg width="30"
+            <label class="visually-hidden" for="footer-email"></label><input type="email" id="footer-email" name="footer-email"
+                placeholder="Your E-mail">
+            <button class="footer-form__button" type="submit" aria-label="Sign Up">Sign Up<svg width="30"
                 height="11">
                 <use xlink:href="img/sprite/sprite.svg#arrow"></use>
               </svg>
@@ -792,7 +823,7 @@
           </li>
         </ul>
         <a class="login-form-link" href="#">Forgot your password?</a>
-        <button class="login-form-button btn" type="submit">Log In</button>
+        <button class="login-form-button btn" type="submit" aria-label="Enter">Log In</button>
       </form>
       <div class="login-text">
         <p>Don’t have an account?</p>

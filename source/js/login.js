@@ -6,6 +6,7 @@ const loginClose = loginBlock.querySelector('.login-top-button');
 const loginMail = loginBlock.querySelector('#email-login');
 const loginForm = loginBlock.querySelector('form');
 
+
 // Проверка - поддерживает ли браузер запись в LocalStorage //
 let isStorageSupport = true;
 let storage = '';
@@ -27,6 +28,7 @@ loginLinks.forEach((link) => {
     if (storage) {
       loginMail.focus();
     }
+
   });
 
 });
@@ -41,7 +43,7 @@ loginForm.addEventListener('submit', (evt) => {
   if (isStorageSupport) {
     localStorage.setItem('email', loginMail.value);
   }
-  loginForm.reset();
+
 });
 
 // Закрытие модального окна ---
@@ -51,6 +53,8 @@ loginForm.addEventListener('submit', (evt) => {
 loginClose.addEventListener('click', (evt)=> {
   evt.preventDefault();
   loginBlock.classList.remove(LOGIN_OVERLAY);
+
+
 });
 
 // Esc

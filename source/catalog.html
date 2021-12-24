@@ -93,7 +93,7 @@
             <div class="filter-wrapper">
 
               <form method="get" action="https://echo.htmlacademy.ru">
-                <fieldset class="filter-fieldset filter-fieldset--active">
+                <fieldset class="filter-fieldset filter-fieldset--active" tabindex="0">
                   <h3>Product</h3>
                   <ul class="filter-fieldset__list filter-fieldset-content">
                     <li class="filter-fieldset__item">
@@ -114,7 +114,7 @@
                     </li>
                   </ul>
                 </fieldset>
-                <fieldset class="filter-fieldset filter-fieldset--material">
+                <fieldset class="filter-fieldset filter-fieldset--material" tabindex="0">
                   <h3>Material</h3>
                   <ul class="filter-fieldset__list filter-fieldset-content">
                     <li class="filter-fieldset__item">
@@ -127,7 +127,7 @@
                     </li>
                   </ul>
                 </fieldset>
-                <fieldset class="filter-fieldset filter-fieldset--collection">
+                <fieldset class="filter-fieldset filter-fieldset--collection" tabindex="0">
                   <h3>Collection</h3>
                   <ul class="filter-fieldset__list  filter-fieldset-content">
                     <li class="filter-fieldset__item">
@@ -140,7 +140,7 @@
                     </li>
                   </ul>
                 </fieldset>
-                <fieldset class="filter-fieldset filter-fieldset--active">
+                <fieldset class="filter-fieldset filter-fieldset--active" tabindex="0">
                   <h3>Price</h3>
                   <div class="filter-fieldset__range filter-fieldset-content">
                     <div class="filter-fieldset__controls">
@@ -514,9 +514,9 @@
           <h2>The good stuff in your inbox </h2>
           <p>News and updates from CH. No spam, we promise.</p>
           <form method="post" action="https://echo.htmlacademy.ru">
-            <label for="footer-email"><input type="email" id="footer-email" name="footer-email"
-                placeholder="Your E-mail"></label>
-            <button class="footer-form__button" type="submit" aria-label="Подписаться">Sing Up<svg width="30"
+            <label class="visually-hidden" for="footer-email"></label><input type="email" id="footer-email" name="footer-email"
+                placeholder="Your E-mail">
+            <button class="footer-form__button" type="submit" aria-label="Подписаться">Sign Up<svg width="30"
                 height="11">
                 <use xlink:href="img/sprite/sprite.svg#arrow"></use>
               </svg>

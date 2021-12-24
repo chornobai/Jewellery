@@ -44,6 +44,7 @@
 
 .goods-link h3 {
   @include reset;
+  text-align: center;
   color: $black;
   font-size: inherit;
   line-height: inherit;

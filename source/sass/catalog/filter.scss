@@ -52,6 +52,12 @@
   &--collection {
     padding: 23px 0 20px 23px;
   }
+
+  &:focus-within {
+    .filter-fieldset-content {
+      display: block;
+    }
+  }
 }
 
 .filter-fieldset h3 {
@@ -132,6 +138,15 @@
 }
 
 .filter-fieldset__item input:hover + label {
+  color: $brown;
+  transition: 0.2s;
+}
+
+.filter-fieldset__item input:focus + label::before {
+  box-shadow: 0 0 2px 1px $brown;
+}
+
+.filter-fieldset__item input:focus + label {
   color: $brown;
   transition: 0.2s;
 }
