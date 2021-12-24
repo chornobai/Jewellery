@@ -23,6 +23,7 @@ function initSwiper() {
       prevEl: '.swiper-button-prev',
     },
 
+
     breakpoints: {
       320: {
         slidesPerView: 2,
@@ -57,7 +58,9 @@ function initSwiper() {
             return `<span class="${className}">${index + 1}</span>`;
           },
         },
+
       },
+
 
       1024: {
         slidesPerView: 4,
@@ -102,7 +105,7 @@ function initSwiper() {
     });
   });
   return slider;
-}
 
+}
 
 export { initSwiper };
