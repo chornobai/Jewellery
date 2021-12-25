@@ -14,6 +14,9 @@ function initSwiper() {
     observer: true,
     observeParents: true,
     observeSliderChildren: true,
+
+    watchSlidesProgress:true,
+    preloadImages: true,
     keyboard: {
       enabled: true,
     },
