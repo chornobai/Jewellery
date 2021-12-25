@@ -60,6 +60,7 @@ function initSwiper() {
           renderBullet: function (index, className) {
             return `<span class="${className}">${index + 1}</span>`;
           },
+
         },
 
       },
