@@ -132,7 +132,9 @@
   left: 50%;
   top: 29px;
   transform: translateX(-51%);
-
+&--main{
+  cursor:auto;
+}
   svg {
     color: $brown;
   }

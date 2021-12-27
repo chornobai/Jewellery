@@ -42,7 +42,7 @@
           <label class="visually-hidden" for="search"></label>
           <input type="text" id="search" name="search" placeholder="Type here to search">
         </form>
-        <a class="header-top__logo" tabindex="0"><svg width="66" height="66">
+        <a class="header-top__logo header-top__logo--main" tabindex="0"><svg width="66" height="66">
             <use xlink:href="img/sprite/sprite.svg#logo"></use>
           </svg></a>
         <div class="header-top__right">
@@ -140,7 +140,7 @@
                       srcset="img/content/main/2-tablet-main.jpg 1x, img/content/main/2-tablet-main@2x.jpg 2x">
                     <!-- 1х: 130px; 2x:260px -->
                     <source media="(max-width: 767px)"
-                      srcset="img/content/main/2-mobile-maiin.jpg 1x, img/content/main/2-mobile-main@2x.jpg 2x">
+                      srcset="img/content/main/2-mobile-main.jpg 1x, img/content/main/2-mobile-main@2x.jpg 2x">
                     <!-- 1х: 270px; 2x: 540px -->
                     <img loading="lazy" src="img/content/main/2-desktop-main.jpg"
                       srcset="img/content/2-desktop-main@2x.jpg 2x" alt="Layered сhoker" width="270" height="284">
@@ -709,7 +709,7 @@
           <p>News and updates from CH. No spam, we promise.</p>
           <form method="post" action="https://echo.htmlacademy.ru">
             <label class="visually-hidden" for="footer-email"></label><input type="email" id="footer-email"
-              name="footer-email" placeholder="Your E-mail">
+              name="footer-email" placeholder="Your E-mail" required>
             <button class="footer-form__button" type="submit" aria-label="Sign Up">Sign Up<svg width="30" height="11">
                 <use xlink:href="img/sprite/sprite.svg#arrow"></use>
               </svg>

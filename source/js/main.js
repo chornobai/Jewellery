@@ -15,10 +15,4 @@ if (CATALOG_PAGE) {
 else {
   initMainAccordion();
   initSwiper();
-  window.addEventListener('resize', (evt) => {
-    evt.preventDefault();
-    initSwiper().update();
-
-  });
-
 }
