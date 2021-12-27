@@ -57,6 +57,13 @@
     .filter-fieldset-content {
       display: block;
     }
+
+    h3 {
+      &::after {
+        background: url("../img/icons/arrow-up.svg") no-repeat center;
+        background-size: cover;
+      }
+    }
   }
 }
 

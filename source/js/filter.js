@@ -3,7 +3,7 @@ function initFilter() {
   const filterOpen = document.querySelector('.filter-open');
   const filterClose = document.querySelector('.filter-close');
   const filterBlock = document.querySelector('.filter');
-  const filterTriggers = filterBlock.querySelectorAll('.filter-fieldset');
+  const filterTriggers = filterBlock.querySelectorAll('h3');
 
   filterBlock.classList.remove('filter--nojs');
   // --- Открыть фильтр
@@ -23,11 +23,13 @@ function initFilter() {
   // --- Accordion
 
   filterTriggers.forEach((item) => {
-    item.addEventListener('click', (evt) => {
-      evt.preventDefault();
-      item.classList.toggle('filter-fieldset--active');
-      item.blur();
+    item.addEventListener('click', () => {
+      const block = item.closest('fieldset');
+      block.blur();
+      block.classList.toggle('filter-fieldset--active');
     });
+
+
   });
 
 }
